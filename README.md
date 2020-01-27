@@ -38,21 +38,23 @@ Components of UNIX:
 ------------------
 User
 
-&darr;
+    &darr;
 
 Application
 
-&darr;
+    &darr;
 
 Shell
 
-&darr;
+    &darr;
 
 Kernal
 
-&darr;
+    &darr;
 
 Hardware
+
+----
 
 Shell:
 -----
