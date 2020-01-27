@@ -36,7 +36,7 @@ Note:  We can see a detailed list of Linux flavour in www.distrowatch.com
 
 Components of UNIX:
 ------------------
-<center>
+
 User
 
 &nbsp;&nbsp;&darr;
@@ -54,11 +54,36 @@ Kernal
 &nbsp;&nbsp;&darr;
 
 Hardware
-</center>
+
 ----
 
 Shell:
 -----
+It is the outer layer of UNIX OS.
+It reads our command verify whether it is valid or not and whether it is properly used or not. If everthing is proper the shell convert/interpretes the command into kernal understandable form and have over the kernal.
+Shell acts as interface bitween user and kernal.
+
+Kernal:
+----
+It is the core component of UNIX OS.
+It is reponsible to execute our command.
+It is reponsible for memory allocation and time allocation.
+Kernal acts or interface bitween shell and hardware
+
+Note:
+Shell and kernal together considered as operating system.
+
+Command Exicution Flow:
+-----
+
+|         |            |
+| :-----------: |:-------------:|
+| End User types a command on the terminal
+eg. touch sunny.txt| |
+| command will be submitted to the shell      |      |
+| shell checks whether this command is valid or not and whether it is properly used or not| If it is not proper display error message to the terminal|
+| kernal exicute that command and perform required action | |
+| Again $ promt will be displayed to the teminal which indicates ready for the next command| |
 
 
 
