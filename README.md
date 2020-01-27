@@ -118,3 +118,80 @@ Very Basic Command Overview:
 10. help  ---> to listout all available command
 11. hello ---> to display brief system information
 12. clear ---> to clear the terminal
+13. exit  ---> to exit the terminal or to logout session
+
+Type of files:
+----
+
+In Linux everything is treated as file.
+All files are devided into 3 types.
+1. Normal or Ordinary files.
+2. Directory files.
+3. Device files.
+
+Normal or Ordinary files:
+---------
+These files contain data. It can be either text file like abc.txt or binary file like images, videos, audios etc.
+
+Directory files:
+---
+These files represents directories. In windows we can use folder terminology whereas in Linux we can use directory terminology.
+Directory can contain files and sub directories.
+
+Device files:
+----
+In Linux every device is represented as a file. By using we can communicate with that device.
+/dev/pts/0    ---> file representing first terminal
+/dev/pts/1    ---> file representing second terminal
+$ echo "Hello"              --->  Hello will be printed to terminal
+$ echo "Hello" > abc.txt    --->  Hello will be written to abc.txt file
+$ echo "Hello" > /dev/pts/1 --->  Hello will be displayed on the second terminal
+
+How to check file type?
+------
+Blue color represent directoriies and all the remaining are files.
+But this color convertion is varied from flavour to flavour, hence this approach can't be used to check file type we should use 'ls -l' command.
+We should use ls command with -l option
+$ ls -l
+-rwxr-xr-r 1 durga durga 43 jan 5 16:07 demo.sh
+drwr-xr-r  2 durga durga 4094
+
+The first charcter repersent file type:
+- normal file
+d directory file
+l linked file
+c character special file
+b block specific file
+s socket file
+Note: c,b,s representing system file and mostly used by super user.
+
+File System Navigation Commands:
+--------
+Every directory implicity contain two hidden files   .  and   ..
+.   represents currunt working directory
+..  represents parent directory
+~   represents user home directory ( /home/durga/ )
+-   represents previous working dirctory
+/   represents root directory
+
+eg    Assume we are in /home/durga/Desktop/dir1/dir2
+$ cd /
+pwd: /
+
+$ cd .
+pwd: /home/durga/Desktop/dir1/dir2
+
+$ cd ..
+pwd: /home/durga/Desktop/dir1
+
+$ cd ../../..
+pwd: /home/durga
+
+$ cd ~
+pwd: /home/durga
+
+$ cd -
+pwd: change to previous working directory
+
+Note: If we are not passing any argument to cd command then we will move to user home directory
+
