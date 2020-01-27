@@ -85,8 +85,36 @@ Command Exicution Flow:
 | shell checks whether this command is valid or not and whether it is properly used or not| If it is not proper display error message to the terminal|
 | &darr; | |
 | kernal exicute that command and perform required action | &#8739; |
-| &darr; | |
+| &darr; | &#8739; |
 | Again $ promt will be displayed to the teminal which indicates ready for the next command | &#8626; |
 
 
+Note: In Linux there are two types of users, Normal User and Super User. Super User also known as Root User or Admin.
 
+$ promt for Normal User
+<p># promt for Root User
+
+Shortcut to open Terminal    Alt+Ctrl+T
+Shortcut to close Terminal   Ctrl+D
+
+Online UNIX Terminal:
+------
+www.masswork.at/jsuix
+It is free terminal and written completly in javascript.
+We can access in any browser.
+We can use this terminal only for test basic command.
+
+Very Basic Command Overview:
+----
+1. pwd    ---> print working directory, present working directory
+2. ls     ---> to list out all files and directories
+3. mkdir  ---> to create a directories
+4. cd     ---> change directory
+5. touch  ---> to creation empty file
+6. rmdir  ---> to remove a directory
+7. rm     ---> to remove a file
+8. cal    ---> to display current month calender
+9. date   ---> to dispaly currunt system data and time
+10. help  ---> to listout all available command
+11. hello ---> to display brief system information
+12. clear ---> to clear the terminal
