@@ -83,7 +83,7 @@ Command Exicution Flow:
 | command will be submitted to the shell      |      |
 | &darr; | |
 | shell checks whether this command is valid or not and whether it is properly used or not| If it is not proper display error message to the terminal|
-| &darr; | |
+| &darr; | &#8739; |
 | kernal exicute that command and perform required action | &#8739; |
 | &darr; | &#8739; |
 | Again $ promt will be displayed to the teminal which indicates ready for the next command | &#8626; |
