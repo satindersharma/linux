@@ -78,12 +78,11 @@ Command Exicution Flow:
 
 |         |            |
 | :-----------: |:-------------:|
-| End User types a command on the terminal
-eg. touch sunny.txt| |
+| End User types a command on the terminal eg. touch sunny.txt| |
 | command will be submitted to the shell      |      |
 | shell checks whether this command is valid or not and whether it is properly used or not| If it is not proper display error message to the terminal|
-| kernal exicute that command and perform required action | |
-| Again $ promt will be displayed to the teminal which indicates ready for the next command| |
+| kernal exicute that command and perform required action | &#8739; |
+| Again $ promt will be displayed to the teminal which indicates ready for the next command | &#8626; |
 
 
 
