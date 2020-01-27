@@ -37,13 +37,21 @@ Note:  We can see a detailed list of Linux flavour in www.distrowatch.com
 Components of UNIX:
 ------------------
 User
+
 &darr;
+
 Application
+
 &darr;
+
 Shell
+
 &darr;
+
 Kernal
+
 &darr;
+
 Hardware
 
 Shell:
