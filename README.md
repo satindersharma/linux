@@ -147,8 +147,10 @@ $ echo "Hello"              --->  Hello will be printed to terminal
 $ echo "Hello" > abc.txt    --->  Hello will be written to abc.txt file
 $ echo "Hello" > /dev/pts/1 --->  Hello will be displayed on the second terminal
 
+
 How to check file type?
 ------
+<pre>
 Blue color represent directoriies and all the remaining are files.
 But this color convertion is varied from flavour to flavour, hence this approach can't be used to check file type we should use 'ls -l' command.
 We should use ls command with -l option
@@ -164,16 +166,18 @@ c character special file
 b block specific file
 s socket file
 Note: c,b,s representing system file and mostly used by super user.
+</pre>
 
 File System Navigation Commands:
 --------
+<pre>
 Every directory implicity contain two hidden files   .  and   ..
 .   represents currunt working directory
 ..  represents parent directory
 ~   represents user home directory ( /home/durga/ )
 -   represents previous working dirctory
 /   represents root directory
-
+</pre>
 eg    Assume we are in /home/durga/Desktop/dir1/dir2
 <pre>
 $ cd /
