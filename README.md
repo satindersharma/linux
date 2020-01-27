@@ -36,6 +36,7 @@ Note:  We can see a detailed list of Linux flavour in www.distrowatch.com
 
 Components of UNIX:
 ------------------
+<center>
 User
 
 &nbsp;&nbsp;&darr;
@@ -53,7 +54,7 @@ Kernal
 &nbsp;&nbsp;&darr;
 
 Hardware
-
+</center>
 ----
 
 Shell:
