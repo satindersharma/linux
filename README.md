@@ -175,6 +175,7 @@ Every directory implicity contain two hidden files   .  and   ..
 /   represents root directory
 
 eg    Assume we are in /home/durga/Desktop/dir1/dir2
+<pre>
 $ cd /
 pwd: /
 
@@ -192,6 +193,6 @@ pwd: /home/durga
 
 $ cd -
 pwd: change to previous working directory
-
+</pre>
 Note: If we are not passing any argument to cd command then we will move to user home directory
 
