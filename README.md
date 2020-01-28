@@ -200,3 +200,93 @@ pwd: change to previous working directory
 </pre>
 Note: If we are not passing any argument to cd command then we will move to user home directory
 
+Linux File System:
+----
+
+
+linux file system has tree like structure.
+It starts with root (/).
+/ is the top most directory.
+The root directory contains the following important sub-directory. bin, sbin. lib, etc, home, var, usr etc.
+
+1.bin directory:
+-----------
+
+
+bin means binary.
+whenever we are using any command, internally some application will work to perform required activity. These command related application which are used by user will be stored inside bin directory i.e bin directory contains all binary excecutable related to our linux commands.
+$ which ls
+/bin/ls     -->   ls is available inside bin.
+
+2.sbin directory:
+----
+
+
+sbin means secondary bin/system bin.
+It contains all binary executable related to high end admin used command.
+eg: disk partitioning, network managment etc.
+
+Q. What is the difference between bin and sbin?
+---
+
+
+bin contains binary executable related to command used by normal user.
+sbin contains binary ececutable related to command used by super user.
+
+3.etc directory:
+---
+
+
+This directory contains all system configuration files.
+These configuration can be used to customised behavour of linux operating system.
+The users information is available in /etc/passwd file.
+The group information is available in /etc/group file.
+Host information (like ip address and dns name) is available in the /etc/hosts file.
+
+4.tmp directory:
+---
+
+
+tmp means temp directory. If any file required temprarily, such type of files are temprary fils are recommended to create tmp directory.
+These files will be deleted automatically at the time of system shutdown so that memory utilization will be improved.
+If any file which is required permantaly not recommended to create inside tmp directory.
+
+5.dev directory:
+---
+
+
+dev means device.
+In Linux everything is treated as file, even devices also. Every device is represented as a file. by using that file we can communicate with that device. All device related file will be stored inside dev directory.
+eg.
+tty     ->  terminal related file.
+hd      ->  floppy disk related file.
+fd      ->  hard disk related file.
+ram     ->  ram related file.
+stdin   ->  standard input device related file.
+stdout  ->  standard output related file.
+stderr  ->  standard error related file.
+
+6.mnt directory:
+---
+
+
+mnt means mounting.
+we have to attach external file system files from pendrive, cd external drive etc to linux file system then only we can use these external file.
+This attachment proccess is called mounting.
+In the older operating system we have to perform mounting manually but in recent operating system mounting willl perform automatically and we are not required to perform manually. The files of manual mounting will be palced inside mnt directory.
+
+7.media directory:
+---
+
+
+The files which are available because of automatic mounting will be placed inside.
+
+Q. What are the difference between mnt and media directories?
+---
+
+
+mnt   ->    contains manual mounting file.
+media ->    contains automatic mouting file.
+
+8.opt directory:
+--
