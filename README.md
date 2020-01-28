@@ -284,7 +284,6 @@ The files which are available because of automatic mounting will be placed insid
 Q. What are the difference between mnt and media directories?
 ---
 
-
 mnt   ->    contains manual mounting file.
 media ->    contains automatic mouting file.
 
