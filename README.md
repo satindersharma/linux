@@ -258,13 +258,13 @@ If any file which is required permantaly not recommended to create inside tmp di
 dev means device.
 In Linux everything is treated as file, even devices also. Every device is represented as a file. by using that file we can communicate with that device. All device related file will be stored inside dev directory.
 eg.
-tty     ->  terminal related file.
-hd      ->  floppy disk related file.
-fd      ->  hard disk related file.
-ram     ->  ram related file.
-stdin   ->  standard input device related file.
-stdout  ->  standard output related file.
-stderr  ->  standard error related file.
+tty     ->  terminal related file.  
+hd      ->  floppy disk related file.   
+fd      ->  hard disk related file.  
+ram     ->  ram related file.  
+stdin   ->  standard input device related file.  
+stdout  ->  standard output related file.  
+stderr  ->  standard error related file.  
 
 6.mnt directory:
 ---
@@ -289,3 +289,4 @@ media ->    contains automatic mouting file.
 
 8.opt directory:
 --
+
