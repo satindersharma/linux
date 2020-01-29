@@ -289,4 +289,53 @@ media ->    contains automatic mouting file.
 
 8.opt directory:
 --
+opt means optional
+This directory contains all third party software installation files.
+eg. If we are installing any software explicity like google chrome,then the corresponding installation files will be stored inside opt directory.
 
+9.lib directory:
+----
+
+lib means library.
+It contains linux os libraries which are required by commands and applications.
+
+10.var directory:
+---
+var means variable data
+If any data which is keep on changing such type of data will be stored inside var directory.
+eg..   files will be stored inside var.
+
+11.home directory:
+---
+As linux is multiuser operating system, for every user a seprate directory will be created to hold his specific data like videos files, image, documents etc. This directory is called user home directory. All these user home directory will be related inside home directory.
+
+12.root directory:
+--
+It is the home directory or super user(root user)
+/home/durga   ->    durga user home directory
+/home/ravi    ->    ravi user home directory
+/root         ->    super user home directory
+
+Note:   / and root are different. root is the child directory of /
+
+13.proc directory:
+--
+proc means process
+In linux multiple processes are running symntanously, for every proccess a unique id will be there which is also known as PID.
+The data related to currunt running proccess will be stored inside proc directory.
+For everyy proccess a seprate directory will be created inside prox to maintain that data. The name of this directory is same as PID.
+
+14.boot directory:
+--
+boot means booting.
+This directory contains the file which are required to boot operating system.
+
+15.usr directory:
+--
+usr means user
+This directory contain all user softwares.
+1. The main advantage of file system is operating system can locate required files very eaisly.
+2. ext2, ext3, ext4, XFS are names of linux file system.
+NTFS, FAT names of windows file system.
+
+Linux Installation.
