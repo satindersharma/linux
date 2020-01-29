@@ -311,13 +311,14 @@ As linux is multiuser operating system, for every user a seprate directory will 
 
 12.root directory:
 --
+<pre>
 It is the home directory or super user(root user)
 /home/durga   ->    durga user home directory
 /home/ravi    ->    ravi user home directory
 /root         ->    super user home directory
 
 Note:   / and root are different. root is the child directory of /
-
+</pre>
 13.proc directory:
 --
 proc means process
