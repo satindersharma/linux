@@ -343,6 +343,7 @@ Linux Installation.
 ---
 You can se this step by step on this link:
 https://www.wikihow.com/Install-Ubuntu-on-VirtualBox
+(change the controller IDE to load ubuntu from your iso file is not included in in this link)
 
 ### Step 1. Oracle VirtualBox Installation
 <pre>
@@ -356,6 +357,12 @@ https://ubuntu.com/   ->    Download    ->    under Ubuntu Desktop   ->   18.04 
 
 change no of proccesser in setting  ->  system  ->  proccessor  -> change to 2
 (The no. of proccessor for virtual machine is set to 1 as default , to change it to 2 we need the virtualization enabled in BIOS)
+
+(change the controller IDE to load ubuntu from your iso file)
+--
+setting  ->  storage  ->  in controller IDE click on empty  -> on right click on optical drive cd icon    ->    click on choose a disk file and select your  downloaded ubuntu iso file
+now we can click on start   -> at some point after this there is two option 1. try ubuntu 2. install ubuntu -> click on install ubuntu
+
 </pre>
 Various Important Points:
 --
