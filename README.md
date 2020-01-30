@@ -340,3 +340,34 @@ This directory contain all user softwares.
 NTFS, FAT names of windows file system.
 
 Linux Installation.
+---
+You can se this step by step on this link:
+https://www.wikihow.com/Install-Ubuntu-on-VirtualBox
+
+### Step 1. Oracle VirtualBox Installation
+
+To run Virtual Computer in our system without effects origal computer, We should use virtualbox. It can execute the capability of our existing computer of that we can downlaod virtualbox software from:
+download VIrtualBox:
+https://www.virtualbox.org/   ->    downlaods   ->    windows Hosts
+
+download ubuntu:
+https://ubuntu.com/   ->    Download    ->    under Ubuntu Desktop   ->   18.04 LTS
+(here ubuntu decide there version name on release year.month format like 18.04 LTS is the virsion release in 2018 april)
+
+change no of proccesser in setting  ->  system  ->  proccessor  -> change to 2
+(The no. of proccessor for virtual machine is set to 1 as default , to change it to 2 we need the virtualization enabled in BIOS)
+
+Various Important Points:
+--
+
+ctrl+alt+t    ->    open terminal
+ctrl+d        ->    close terminal
+ctrl+shift++  ->    increase font
+ctrl+-        ->    decrease font
+
+full screen:      devices ->  insert guest addition cd image  ->  run
+to copy containts from linux to window and viceversa: devices ->  shared clipboard ->  bidirectional    and then restart ubuntu
+to drag and drop files: devices ->  drag and drop ->  bidirectional     and restart ubuntu
+
+
+
