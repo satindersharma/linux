@@ -362,7 +362,8 @@ change no of proccesser in setting  ->  system  ->  proccessor  -> change to 2
 --
 setting  ->  storage  ->  in controller IDE click on empty  -> on right click on optical drive cd icon    ->    click on choose a disk file and select your  downloaded ubuntu iso file
 now we can click on start   -> at some point after this there is two option 1. try ubuntu 2. install ubuntu -> click on install ubuntu
-
+you can choose to minimal installation for fast install
+Installation type: keep selected Erase disk and install ubuntu
 </pre>
 Various Important Points:
 --
