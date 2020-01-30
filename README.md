@@ -345,7 +345,7 @@ You can se this step by step on this link:
 https://www.wikihow.com/Install-Ubuntu-on-VirtualBox
 
 ### Step 1. Oracle VirtualBox Installation
-
+<pre>
 To run Virtual Computer in our system without effects origal computer, We should use virtualbox. It can execute the capability of our existing computer of that we can downlaod virtualbox software from:
 download VIrtualBox:
 https://www.virtualbox.org/   ->    downlaods   ->    windows Hosts
@@ -356,10 +356,10 @@ https://ubuntu.com/   ->    Download    ->    under Ubuntu Desktop   ->   18.04 
 
 change no of proccesser in setting  ->  system  ->  proccessor  -> change to 2
 (The no. of proccessor for virtual machine is set to 1 as default , to change it to 2 we need the virtualization enabled in BIOS)
-
+</pre>
 Various Important Points:
 --
-
+<pre>
 ctrl+alt+t    ->    open terminal
 ctrl+d        ->    close terminal
 ctrl+shift++  ->    increase font
@@ -368,6 +368,6 @@ ctrl+-        ->    decrease font
 full screen:      devices ->  insert guest addition cd image  ->  run
 to copy containts from linux to window and viceversa: devices ->  shared clipboard ->  bidirectional    and then restart ubuntu
 to drag and drop files: devices ->  drag and drop ->  bidirectional     and restart ubuntu
-
+</pre>
 
 
