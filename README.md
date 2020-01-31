@@ -378,4 +378,27 @@ to copy containts from linux to window and viceversa: devices ->  shared clipboa
 to drag and drop files: devices ->  drag and drop ->  bidirectional     and restart ubuntu
 </pre>
 
+ls command
+---
+
+we can use ls command to listout all files and directories prsent in the given directory.
+Note: we can get manual documentation for any command by using man.
+$ man command_name
+It provides complete information for any command.
+
+various options of ls command.
+1.$ ls ->  It will display all files and directories present in the current working directory in alphabatical order.
+2.$ ls -r ->  It will display all files directories in reverse of aphabetical form.
+3.$ ls -l ->  It will be display all files adn directories in long listing form.
+eg.   -rwr-r-- 1 durga durga 0 jan 31 11:49 a.txt
+in above -(file type)rwr-r--(file permission) 1(no of links) durga(owner name) durga(group name) 0(file size in bytes) jan 31 11:49(the last modified time or creation time) a.txt(file name)
+
+4.$ ls -t ->  To display all files based on last modified data type most recent is at top and old are at the bottom.
+5.$ ls -rt  ->  To display all files based on reverse of last modified data and time. Old files at top and recent files are at bottom.
+6.$ ls -a   ->  a means all . To display all files including hidden files. hence . and .. also will be displayed.
+7.$ ls -A   ->  A means almost all. To display all files including hidden files excluding . and ..
+8.$ ls -F   ->  To display all files by type.
+      directory         ->  /
+      executable file   ->  *
+      link file         ->  @
 
