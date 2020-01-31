@@ -380,7 +380,7 @@ to drag and drop files: devices ->  drag and drop ->  bidirectional     and rest
 
 ls command
 ---
-
+<pre>
 we can use ls command to listout all files and directories prsent in the given directory.
 Note: we can get manual documentation for any command by using man.
 $ man command_name
@@ -402,3 +402,35 @@ in above -(file type)rwr-r--(file permission) 1(no of links) durga(owner name) d
       executable file   ->  *
       link file         ->  @
 
+9.$ ls -f   ->  To display all files including hidden files by disabling colors.
+10.$ ls -i  ->  To display all files including i-node number.
+                  i-node is the address of location, where file attributes are stored.
+                  The following are various file attributes.
+                  1) The size of the file       2) No of links of the file    3) owner name     4) group name
+                  5) creation time        6) last modified time   7) last accessed time         etc
+
+11.$ ls -R  ->  -R means Recursive. It will list all files and directories including sub directory contians also.
+12.$ ls -s  ->  -s means size in blocks/
+                  It willl list all files and the number of blocks size by that file. 1 block = 1024byte = 1kb
+13.$ ls -h  ->  To display in human readable form.
+
+Note:
+---
+We can use these options symntanously. where we are using multiple option together then orer is not important.
+eg. All the following commands are equals and produced same result.
+$ ls -l -t -r
+$ ls -t -r -l
+$ ls -r -l -t
+$ ls -ltr
+$ ls -lrt
+
+
+Note:
+--
+If large no files are available then we have to use more or less command to view list page by page.
+head or tail to view perticular no of lines
+$ ls -l -/etc | more          ->    to view page by page in forward direction
+$ ls -l -/etc | less          ->    to view page by page in forward and backword direction
+$ ls -l -/etc | head -5       ->    to view top 5 file
+$ ls -l -/etc | tail -5       ->    to view last 5 file
+</pre>
