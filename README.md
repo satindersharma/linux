@@ -434,3 +434,17 @@ $ ls -l -/etc | less          ->    to view page by page in forward and backword
 $ ls -l -/etc | head -5       ->    to view top 5 file
 $ ls -l -/etc | tail -5       ->    to view last 5 file
 </pre>
+
+Date command:
+----
+we can use date command to display currunt date and time of system.
+various options:
+1.$ date +%D      =>    To display only date in the form of mm/dd/yy
+2.$ date +%T      =>    To display only time in the form of hh:mm:ss
+3.$ date +%m      =>    To display only month value
+4.$ date +%d      =>    To display only year value
+5.$ date +%y      =>    To display only year value in yy form
+6.$ date +%Y      =>    To display only year value in yyyy form
+7.$ date +%H      =>    To display only hour value in 24 hour format
+8.$ date +%M      =>    To display only minute value
+9.$ date +%S      =>    To display only second value
