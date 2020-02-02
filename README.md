@@ -506,7 +506,7 @@ $ rm -ri dir4     (i means interactive option)
 while removing files and directories, if we want confirmatin then we have to use -i option.
 --
 
-
+<div>
 $ rm -ir dir1
 rm: descend into directory 'dir1'? y
 rm: remove regular empty file 'dir1/d.txt'? y
@@ -514,7 +514,7 @@ rm: remove regular empty file 'dir1/b.txt'? y
 rm: remove regular empty file 'dir1/c.txt'? y
 rm: remove regular empty file 'dir1/a.txt'? y
 rm: remove directory 'dir1'? y
-
+</div>
 -f    force removeal( it is opposite to interactive)
 --
 
@@ -528,14 +528,14 @@ verbose output optioin(-v):
 
 If we want to know the sequence of removal on the screen we should use -v option.
 
-
+<div>
 $ rm -rv dir3
 removed 'dir3/d.txt'
 removed 'dir3/b.txt'
 removed 'dir3/c.txt'
 removed 'dir3/a.txt'
 removed directory 'dir3'
-
+</div>
 
 Note: in linux operating sytem, there is no way to reverse remove files and directories. Hence while removing files and directories  we have to take special care.
 The following is the most dangrous command, becaouse it will remove total linux file system.
