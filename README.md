@@ -459,6 +459,8 @@ Note: If the file name contains date and time, then that file is said to be time
 
 calender command:
 ---
+
+
 1. $ cal          ->    display curruent month calender
 2. $ cal 2020     ->    to display complete 2020 year calender
 3. $ cal 08 2020  ->    to display august month 2020 calender
@@ -468,6 +470,8 @@ calender command:
 
 Working with direcroties:
 ---
+
+
 1.creation of directories:
 $ mkdir dir1 dir2       ->    to create multiple directories
 
@@ -478,6 +482,8 @@ $ mkdir -p dir6/dir7/dir8 -> now this will create all the directories if not the
 
 e.g create 5 directories named with dir1...dir5 in these directories create empty file named with a.txt...d.txt.
 --
+
+
 $ mkdir dir{1..5}
 $ touch dir{1..5}/{a..d}.txt
 
@@ -491,12 +497,16 @@ If the directory is not empty then we should use rm command to remove that direc
 
 whenver we are using rm command for directories. we should use -r or -R option. hence it is not case senstive.
 --
+
+
 $ rm dir1   -> error (can't remove dir1: Is a directory)
 $ rm -r dir1   or $ rm -R dir1
 $ rm -ri dir4     (i means interactive option)
 
 while removing files and directories, if we want confirmatin then we have to use -i option.
 --
+
+
 $ rm -ir dir1
 rm: descend into directory 'dir1'? y
 rm: remove regular empty file 'dir1/d.txt'? y
@@ -507,12 +517,17 @@ rm: remove directory 'dir1'? y
 
 -f    force removeal( it is opposite to interactive)
 --
+
+
 while removing files and directories if we don't want any error messages then we should use -f option. It is opposite to -i. It will ignore non existing directories information.
 $ rm dir -if dir1 ->    even dir1 is not avialable we won't get any error message.
 
 verbose output optioin(-v):
 --
+
+
 If we want to know the sequence of removal on the screen we should use -v option.
+
 
 $ rm -rv dir3
 removed 'dir3/d.txt'
@@ -520,6 +535,7 @@ removed 'dir3/b.txt'
 removed 'dir3/c.txt'
 removed 'dir3/a.txt'
 removed directory 'dir3'
+
 
 Note: in linux operating sytem, there is no way to reverse remove files and directories. Hence while removing files and directories  we have to take special care.
 The following is the most dangrous command, becaouse it will remove total linux file system.
