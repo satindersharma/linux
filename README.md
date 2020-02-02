@@ -413,9 +413,10 @@ in above -(file type)rwr-r--(file permission) 1(no of links) durga(owner name) d
 12.$ ls -s  ->  -s means size in blocks/
                   It willl list all files and the number of blocks size by that file. 1 block = 1024byte = 1kb
 13.$ ls -h  ->  To display in human readable form.
-
+</pre>
 Note:
 ---
+<pre>
 We can use these options symntanously. where we are using multiple option together then orer is not important.
 eg. All the following commands are equals and produced same result.
 $ ls -l -t -r
@@ -423,10 +424,11 @@ $ ls -t -r -l
 $ ls -r -l -t
 $ ls -ltr
 $ ls -lrt
-
+</pre>
 
 Note:
 --
+<pre>
 If large no files are available then we have to use more or less command to view list page by page.
 head or tail to view perticular no of lines
 $ ls -l -/etc | more          ->    to view page by page in forward direction
@@ -437,6 +439,7 @@ $ ls -l -/etc | tail -5       ->    to view last 5 file
 
 Date command:
 ----
+<pre>
 we can use date command to display currunt date and time of system.
 various options:
 1.$ date +%D      =>    To display only date in the form of mm/dd/yy
@@ -448,7 +451,7 @@ various options:
 7.$ date +%H      =>    To display only hour value in 24 hour format
 8.$ date +%M      =>    To display only minute value
 9.$ date +%S      =>    To display only second value
-
+</pre>
 1.Create an empty file where file names cotains current system date.
 --
 $ touch durga$(date +%d%m%Y).log
@@ -459,7 +462,7 @@ Note: If the file name contains date and time, then that file is said to be time
 
 calender command:
 ---
-
+<pre>
 
 1. $ cal          ->    display curruent month calender
 2. $ cal 2020     ->    to display complete 2020 year calender
@@ -467,10 +470,10 @@ calender command:
 4. $ cal 1        ->    to display 1st year calender
 5. $ cal 9999     ->    to display 9999 year calender
 6. $ cal 10000    ->    error (cal is define in the range of 1....9999 years only)
-
+</pre>
 Working with direcroties:
 ---
-
+<pre>
 
 1.creation of directories:
 $ mkdir dir1 dir2       ->    to create multiple directories
@@ -479,34 +482,35 @@ $ mkdir dir1/dir2/dir3 -> this will create only dir3 only and only if there is d
 
 $ mkdir -p dir6/dir7/dir8 -> now this will create all the directories if not there.
 -p    ->    path of directory. all directories in the discription path will be created. first dir6 will created and in that dirctory dir7 will be created and within dir7 directory dir8 will be created.
-
+</pre>
 e.g create 5 directories named with dir1...dir5 in these directories create empty file named with a.txt...d.txt.
 --
 
-
+<pre>
 $ mkdir dir{1..5}
 $ touch dir{1..5}/{a..d}.txt
-
+</pre>
 how to remove directories:
 --
+<pre>
 we have to use rmdir command.
 $ rmdir dir1      ->    to remove empty dir1
 
 Note: rmdir command will work for empty directories. If the directory is not empty then we will get error. we can't use rmdir to remove files. hence it is waste and useless command in linux os.
 If the directory is not empty then we should use rm command to remove that directory. all internal files and directory present in the directory will be deleted. rm command can be used even to remove files also. hence rm command is recommended to use over rmdir command.
-
+</pre>
 whenver we are using rm command for directories. we should use -r or -R option. hence it is not case senstive.
 --
 
-
+<pre>
 $ rm dir1   -> error (can't remove dir1: Is a directory)
 $ rm -r dir1   or $ rm -R dir1
 $ rm -ri dir4     (i means interactive option)
-
+</pre>
 while removing files and directories, if we want confirmatin then we have to use -i option.
 --
 
-<div>
+<pre>
 $ rm -ir dir1
 rm: descend into directory 'dir1'? y
 rm: remove regular empty file 'dir1/d.txt'? y
@@ -514,7 +518,7 @@ rm: remove regular empty file 'dir1/b.txt'? y
 rm: remove regular empty file 'dir1/c.txt'? y
 rm: remove regular empty file 'dir1/a.txt'? y
 rm: remove directory 'dir1'? y
-</div>
+</pre>
 -f    force removeal( it is opposite to interactive)
 --
 
@@ -528,15 +532,18 @@ verbose output optioin(-v):
 
 If we want to know the sequence of removal on the screen we should use -v option.
 
-<div>
+<pre>
 $ rm -rv dir3
 removed 'dir3/d.txt'
 removed 'dir3/b.txt'
 removed 'dir3/c.txt'
 removed 'dir3/a.txt'
 removed directory 'dir3'
-</div>
+</pre>
 
 Note: in linux operating sytem, there is no way to reverse remove files and directories. Hence while removing files and directories  we have to take special care.
+--
+<pre>
 The following is the most dangrous command, becaouse it will remove total linux file system.
 $ rm -r /         (never run this even for test purpose, it will delete the whole system)
+</pre>
