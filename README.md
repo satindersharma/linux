@@ -695,3 +695,27 @@ View or display contents of the file:
 --
 We can view contents of the files by using the following commands.
 1. cat      2. tac      3. rev      4. head     5. tail     6. more     7. less
+
+$ cat < file.txt or $cat file.txt   (< symbol is optional)
+while display file contents we can include line no by using -n option.
+$ cat -n demo.txt
+
+while display contents we can skip blank lines -b option.
+$ cat -nb demo.txt      ->    numbering for blank line won't be there.
+
+We can view multiple files contents at a time by using cat command
+$ cat a.txt b.txt c.txt
+
+tac command:
+---
+It is the reverse of cat. It will display file contents in reverse order of lines i.e 1st line become last line. last line become first line.
+$ tac file1.txt
+
+rev command:
+--
+rev means reverse. There each line contents will be reverse. It is horizintal reverse.
+$ rev demo.txt
+Note:    cat command will display total file conntent at a time. It is best suitable for small file. If the file cotains 1000 of lines then it is not recommended to use cat command. We should go for head, tail, more and less command.
+
+head command
+
