@@ -547,3 +547,24 @@ Note: in linux operating sytem, there is no way to reverse remove files and dire
 The following is the most dangrous command, becaouse it will remove total linux file system.
 $ rm -r /         (never run this even for test purpose, it will delete the whole system)
 </pre>
+
+Case Study:
+--
+|         |         |         |         |         |         | /       |         |         |         |   |   |
+|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---|---|
+|         |         |         |         |         |         | &darr;  |         |         |         |   |   |
+|         |         |         |         |         |         | home    |         |         |         |   |   |
+|         |         |         |         |         |         | &darr;  |         |         |         |   |   |
+|         |         |         |         |         |         | durga   |         |         |         |   |   |
+|         |         |         |         |         |         | &darr;  |         |         |         |   |   |
+|         |         |         | &#8213; | &#8213; | &#8213; | &#8213; | &#8213; | &#8213; |         |   |   |
+|         |         |         | &darr;  |         |         |         |         | &darr;  |         |   |   |
+|         |         |         | x       |         |         |         |         | y       |         |   |   |
+|         |         |         | &darr;  |         |         |         |         | &darr;  |         |   |   |
+|         | &#8213; | &#8213; | &#8213; | &#8213; | &#8213; |         | &#8213; | &#8213; | &#8213; |   |   |
+|         | &darr;  |         |         |         | &darr;  |         | &darr;  |         | &darr;  |   |   |
+|         | x1      |         |         |         | x2      |         | y1      |         | y2      |   |   |
+|         | &darr;  |         |         |         |         |         | &darr;  |         |         |   |   |
+| &#8213; | &#8213; | &#8213; |         |         |         | &#8213; | &#8213; | &#8213; |         |   |   |
+| &darr;  |         | &darr;  |         |         |         | &darr;  |         | &darr;  |         |   |   |
+| x11     |         | x12     |         |         |         | y11     |         | y12     |         |   |   |
