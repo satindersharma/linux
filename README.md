@@ -675,3 +675,9 @@ $ cal > fil1.txt        -> this will overwrite
  If fil1.txt is not already  available then it will be created with our provided data.
  If fil1.txt is already available with some data then it will be overwritten with our provided data.
  
+Instead of overwriting if we want to append operation then we should use  >>  with cat command.
+
+$ cal >> fil1.txt        -> this will append the data
+ some content
+ press ctrl+d           -> to save and exit
+ 
