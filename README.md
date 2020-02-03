@@ -681,3 +681,17 @@ $ cal >> fil1.txt        -> this will append the data
  some content
  press ctrl+d           -> to save and exit
  
+touch command:
+--
+we can use touch command to create empty file.
+$ touch demo.txt  ->    empty file will created.
+Q. If we are using touch command but the file already available with some contains then what will happend?
+The content of the file won't be changed but last modified data and time(i.e timestamp) will be updated.
+
+Note: we can use touch command for the following 2 purposes:
+1.    To crreate an empty file.           2.    To change timestamp of existing file
+
+View or display contents of the file:
+--
+We can view contents of the files by using the following commands.
+1. cat      2. tac      3. rev      4. head     5. tail     6. more     7. less
