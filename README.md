@@ -550,6 +550,9 @@ $ rm -r /         (never run this even for test purpose, it will delete the whol
 
 Case Study:
 --
+
+create this directory stucture.
+
 |          |          |         |          |         |         |     /    |          |         |         |   |   |
 |:--------:|:--------:|:-------:|:--------:|:-------:|:-------:|:--------:|:--------:|:-------:|:-------:|:-:|:-:|
 |          |          |         |          |         |         |  &darr;  |          |         |         |   |   |
@@ -568,3 +571,107 @@ Case Study:
 | &#11024; |  &#8213; | &#8628; |          |         |         | &#11024; |  &#8213; | &#8628; |         |   |   |
 |  &darr;  |          |  &darr; |          |         |         |  &darr;  |          |  &darr; |         |   |   |
 |    x11   |          |   x12   |          |         |         |    y11   |          |   y12   |         |   |   |
+
+
+1st.way:
+--
+$ mkdir x y
+$ cd x
+$ mkdir x1 x2
+$ cd ../..
+$ cd y
+$ mkdir y1 y2
+$ cd y1
+$ mkdir y11 y12
+
+2nd.way:
+--
+$ mkdir x y x/x1 x/2 x/x1/x11 x/x1/x12 y/y1 y/y2 y/y1/y11 y/y1/y12
+
+3rd.way:
+--
+$ mkdir -p x/2 x/x1/x11 x/x1/x12 x/x2 y/y1/y11 y/y1/y12 y/y2
+
+4th.way:
+--
+$ mkdir -p x/x{1,2} x/x1/x1{1,2} y/y{1,2} y/y1/y1{1,2}
+
+Absolute path vs Relative path:
+----
+Absolute path: It is the path from root(/) to destination i.e it is complete path.
+Relative path: It is the path from currunt working directory to destination. It is alway retlative to currunt location.
+
+$ mkdir -p x/x{1,2} x/x1/x1{1,2} y/y{1,2} y/y1/y1{1,2}
+Assume we are in x11 directory to change to y2 directory:
+Absolute path: $ cd /home/satyam/y/y2
+               $ ~/y/y2
+Relative path: $ ./../../../y/y2
+               $ ../../../y/y2
+
+Assume we are in y2 directory to change to x11 directory:
+Absolute path: $ cd /home/satyam/x/x1/x11
+               $ ~/x/x1/x11
+Relative path: $ ./../../../x/x1/x11
+               $ ../../../x/x1/x11
+
+Copy command(cp):
+---
+1. To copy from file1.txt to file2.txt
+$ cp file1.txt file2.txt
+
+2. To copy file to directory:
+$ cp file1.txt file2.txt file3.txt output
+
+3. To copy all files of 1 directory to another directory:
+Assume dir1 contains a.txt b.txt
+copy all files of dir1 to dir2
+$ cp dir1/* dir2  (but complsury dir1 should be available already)
+
+4. To copy total directories to another directories.
+Whenerver we are copying total directories to another directories by usin cd command, we should use -r option(either -r or -R).
+$ cp -r dir1 dir2
+
+$ cp dir1 dir2    (if we don't use -r then the follwong error occur)
+cp: -r not specified; omitting directory 'dir1'
+Note: If the destination directory is already available then total dir1 will be copied to dir2.
+If the destination directory dir2 is not already avaible then dir2 will be reated and all files of dir1 will be copied to dir2, but dir1 won't be copied.
+
+
+Moving and Renaming of directories:
+---
+both moving and renaming activities can be performed by using single command mv.
+
+1. Renaming of files:
+$ mv file1.txt file2.txt            ->    file1.txt will be renamed to file2.txt
+
+2. Renaming of directories:
+$ mv dir1 dir2          ->          dir1 renamed to dir2
+
+3. moving of files to some other directory:
+$ mv file1.txt file2.txt file3.txt output
+
+4. moving all files of one directories to another directories:
+mv dir1/* dir2          -> all files of dir1 will be moved to dir2 after excuting these command dir1 will become empty.
+
+5. moving total directory to another directory:
+$ mv dir1 dir2
+Note:
+If dir2 is not available then renmaing opreation will be performed
+
+Working with files
+---
+1. creations of files:
+In linux we can create files in the following ways:
+1. by using touch command
+2. by using cat command
+3. by using editors like gedit, vi, name etc.
+
+cat command:
+--
+$ cal > fil1.txt        -> this will overwrite
+ some content
+ press ctrl+d           -> to save and exit
+ 
+ If fil1.txt is not already  available then it will be created with our provided data.
+ If fil1.txt is already available with some data then it will be overwritten with our provided data.
+ 
