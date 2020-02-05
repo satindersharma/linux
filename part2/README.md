@@ -72,7 +72,7 @@ Where we can use alias name?
 ---
 
 $ alias d20f="mkdir dir1;touch dir1{1,20}.txt"
-<pre>
+</pre>
 To list out all files presence in the present working directory, save these data to 1 output.txt and display no lines to the reminal difeine alias name as cuurnt for this to tal activity?
 -----
 $ alias currunt="ls > output.txt ;wc -l output.txt"
@@ -82,7 +82,7 @@ $ alias currunt="ls > output.txt ;wc -l output.txt"
 <pre>
 $ alias cls='clear'
 $ alias rename='mv'
-<pre>
+</pre>
 3.TO handle typing mistakes:
 --
 <pre>
