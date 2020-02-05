@@ -126,9 +126,24 @@ Note: To refelect these alias, compulsery we have to close and open the terminal
 If we want to represent a group of string according to a perticular pattern then we should go for regular expression.
 
 By using wild card characters we can build regular expression.
+<pre>
+*             ->    represents zero or more characters
+?             ->    represents only one characters
+[]            ->    represents range of characters
+[abc]         ->    either a and b and c
+[!abc]        ->    except a and b and c
+[a-z]         ->    any lower case alphabet symbol
+[A-Z]         ->    any upper case alphabet symbol
+[a-zA-Z]      ->    any alphabet symbol
+[0-9]         ->    any digit from 0 to 9
+[a-zA-Z0-9]   ->    any alphanumric character
+[!a-zA-Z0-9]  ->    except alphanumric character i.e special character
+[[:lower:]]   ->    any lower case alphabet symbol
+[[:upper:]]   ->    any upper case alphabet symbol
+[[:alpha:]]   ->    any alphabet symbol
+[[:digit:]]   ->    any digit
+[[:alnum:]]   ->    any alphanumric character
+[![:digit:]]  ->    anycharacter except
+{}            ->    List with comma seperator
+</pre>
 
-*   ->    represents zero or more characters
-?   ->    represents only one characters
-[]   ->    represents range of characters
-[abc]   ->    either a and b and c
-[!abc]   ->    except a and b and c
