@@ -154,3 +154,92 @@ By using wild card characters we can build regular expression.
 {}            ->    List with comma seperator
 </pre>
 
+Examples:
+----
+1.To list out all files in currunt working directory
+---
+<pre>
+$ ls *
+</pre>
+2.To list out all files some extension
+---
+<pre>
+$ ls *.*
+</pre>
+3.To list out all .txt files
+---
+<pre>
+$ ls *.txt
+</pre>
+4.To list out all files that start with a and end with t
+---
+<pre>
+$ ls a*t
+</pre>
+5.To list out all files where file name contains only 2 character and start with a
+---
+<pre>
+$ ls a?
+</pre>
+6.To list out all files contains exactly 3 character
+---
+<pre>
+$ ls ???
+</pre>
+7.To list out all files that contains atleast 3 character
+---
+<pre>
+$ ls ???*
+</pre>
+8.To list out all files where file name start with a or b or c
+---
+<pre>
+$ ls [abc]*
+</pre>
+9.To list out all files where file name shouldn't start with a and b and c
+---
+<pre>
+$ ls [abc]*
+</pre>
+9.To list out all files start with lower case
+---
+<pre>
+$ ls [[:lower:]]*   or     $ ls [a-z]*
+</pre>
+9.To list out all files start with upper case
+---
+<pre>
+$ ls [[:upper:]]* or $ ls [A-Z]*
+</pre>
+9.To list out all files start with digit
+---
+<pre>
+$ ls [[:digit:]]*   or     $ ls [0-9]*
+</pre>
+9.To list out all files where 1st letter should be uppercase alphabet 2nd letter should be a digit and 3rd letter should be lower case allphabet
+---
+<pre>
+$ ls [A-Z][0=9][a-z]  or    $ ls [[:upper:]][[:digit:]][[:lower:]]
+
+note: curruntly $ ls [A-Z][0=9][a-z] is not working on ubuntu but $ ls [[:upper:]][[:digit:]][[:lower:]] works perfectly
+</pre>
+9.To list out all files start with special symbol
+---
+<pre>
+$ ls [!a-zA-Z0-9]*    or    $ ls [![:alpha:]]*
+</pre>
+9.To list out all files start with .java and .py extension
+---
+<pre>
+$ ls {*.java,*.py}          ->    there should be no spaces in the middle
+
+</pre>
+Note:
+---
+We can use regular expression and wild card characters with the following command also    cp, mv, rm etc.
+9.To copy all files start with digit to dir1 directory
+---
+<pre>
+$ cp [0-9]* dir1    or    $ ls [[:digit:]]* dir1
+</pre>
+
