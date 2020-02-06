@@ -201,34 +201,34 @@ $ ls [abc]*
 <pre>
 $ ls [abc]*
 </pre>
-9.To list out all files start with lower case
+10.To list out all files start with lower case
 ---
 <pre>
 $ ls [[:lower:]]*   or     $ ls [a-z]*
 </pre>
-9.To list out all files start with upper case
+11.To list out all files start with upper case
 ---
 <pre>
 $ ls [[:upper:]]* or $ ls [A-Z]*
 </pre>
-9.To list out all files start with digit
+12.To list out all files start with digit
 ---
 <pre>
 $ ls [[:digit:]]*   or     $ ls [0-9]*
 </pre>
-9.To list out all files where 1st letter should be uppercase alphabet 2nd letter should be a digit and 3rd letter should be lower case allphabet
+13.To list out all files where 1st letter should be uppercase alphabet 2nd letter should be a digit and 3rd letter should be lower case allphabet
 ---
 <pre>
 $ ls [A-Z][0=9][a-z]  or    $ ls [[:upper:]][[:digit:]][[:lower:]]
 
 note: curruntly $ ls [A-Z][0=9][a-z] is not working on ubuntu but $ ls [[:upper:]][[:digit:]][[:lower:]] works perfectly
 </pre>
-9.To list out all files start with special symbol
+14.To list out all files start with special symbol
 ---
 <pre>
 $ ls [!a-zA-Z0-9]*    or    $ ls [![:alpha:]]*
 </pre>
-9.To list out all files start with .java and .py extension
+15.To list out all files start with .java and .py extension
 ---
 <pre>
 $ ls {*.java,*.py}          ->    there should be no spaces in the middle
@@ -237,9 +237,78 @@ $ ls {*.java,*.py}          ->    there should be no spaces in the middle
 Note:
 ---
 We can use regular expression and wild card characters with the following command also    cp, mv, rm etc.
-9.To copy all files start with digit to dir1 directory
+16.To copy all files start with digit to dir1 directory
 ---
 <pre>
 $ cp [0-9]* dir1    or    $ ls [[:digit:]]* dir1
 </pre>
+16.To move all files start with alphabet and end with .txt to dir1 directory
+---
+<pre>
+$ mv [a-zA-Z]*.txt dir1    or    $ mv [[:alpha:]]*.txt dir1
+</pre>
+17.To remove all files start with a or b or c and end with et
+---
+<pre>
+$ rm [abc]*[et]
+</pre>
+18.write command that will display contents of all files that begins with digit and end with vowel
+---
+<pre>
+$ cat [[:digit:]]*[aeiou]
+</pre>
+19.write command that will display contents of all files that begins with lower case alphabet symbol and has d at the 3rd character postion and end with an upper case aphabet symbol
+---
+<pre>
+$ cat [[:lower:]]?d*[[:upper:]]   or $ cat [a-z]?d*[A-Z] 
+</pre>
+20.write command that will list out all .jpg files in Pictures directory
+---
+<pre>
+$ ls /home/satyam/Pictures/*.jpg    or    $ ls ~/Pictures/*.jpg 
+</pre>
 
+
+## locate command
+---
+We can use locate command to locate files and directories in our system. Internally locate command will search in the database fir the required files and directories and return the result.
+As locate command searching in the database instead of file system performance will be improved.
+1.To locate all .jpg files:
+---
+<pre>
+$ locate *.jpg
+</pre>
+2.To ignore case:
+---
+by default locate commad will consider case. if we want to ignore case we have to tuse -i option
+<pre>
+$ locate -i *.jpg
+</pre>
+Note: in ubuntu -i is not working
+3.To limit no of lines in the result
+---
+<pre>
+$ locate --limit 5 *.conf
+</pre>
+4.To --existing   or  -e
+---
+before display ruselt to check wheter the file exists or not we have to use --existing or -e
+<pre>
+$ locate --existing *.jpg
+</pre>
+reason:
+----
+locate command internally uisng database to find the result. These databasea will be updated only once per day. by default after updiating database some files may deleted hence before printing results to check whether files are existing or not, we have to use -e or --existing.
+5.To --follow     or    -L
+---
+before displaying the result to check whether symbolic links pointing to origanal files or not, we have to use -L or --follow option. then broken symbolic links wouldn't be display in the output
+<pre>
+$ locate --follow *.txt     or      $ locate -L *.txt
+note:   wecan use all these option together
+$ locate --existing --follow -i --limit 5 *.txt 
+</pre>
+6.To 
+---
+<pre>
+$ locate *.jpg
+</pre>
