@@ -318,6 +318,7 @@ $ sudo updatedb
 
 ## find command
 ---
+<pre>
 we can use find command to find files and directories persent in our system. It provides more search option when comapred with locate command like
 1.search for only files
 2.search for only directories
@@ -328,11 +329,14 @@ we can use find command to find files and directories persent in our system. It 
 etc
 $ find    ->    it will find all files and directories in currunt working directory and below in linux file system. This is the default behaviour
 $ find /dev       $ find /etc
+</pre>
 maxdepth optioin
 ---
+<pre>
 usually find command will search in all depth levels. but we can specify the required depth level by using maxdepth option.
 $ find -maxdepth 2      ->    to limit depth
 $ find -maxdepth 100    ->    limit to 100 depth if that not case it won't through any error
+</pre>
 note:
 ---
 for max depth option we should use single hyphen(-) but not double hyphen(--)
