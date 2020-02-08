@@ -351,3 +351,24 @@ we can find only files or only directories by using type.
 $ find -type f
 $ find -type d
 
+Note:
+--
+we can use -maxdepth and -type option symntanously
+but we should use first -maxdepth and then -type, otherwise we will get warnigs.
+$ find -type f -maxdepth 2      ->    generate warning    &#10008;
+$ find -maxdepth 2 -type f      ->    no warning          &#10004;
+
+file type by name:
+--
+we can find file and directories by name by using -name option
+$ find -name 'A.txt'
+$ find -name '?.txt'
+if we pass $ find -name ?.txt instead of $ find -name '?.txt'   it give error.
+
+file type by size:
+---
+we should use -size option:
+  + symbol means greater than
+  - symbol means less than
+  
+1.To list out all file where file size is over 
