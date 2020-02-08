@@ -35,6 +35,7 @@ command aliasing:
 alias means other alternattive name or nickname. we can give our more convinent nickname for our linux command aliasing.
 Note:
 --
+
 we can use type command to chech whether the command is already available or not.
 $ type data   -> data is hashed(/bin/date)
 $ type sunny  -> bash:type: sunny: not found
@@ -340,3 +341,13 @@ $ find -maxdepth 100    ->    limit to 100 depth if that not case it won't throu
 note:
 ---
 for max depth option we should use single hyphen(-) but not double hyphen(--)
+
+file type by type:
+---
+we can find only files or only directories by using type.
+-type f   ->    means only files
+-type d   ->    means only directories
+
+$ find -type f
+$ find -type d
+
