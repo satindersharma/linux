@@ -371,4 +371,33 @@ we should use -size option:
   + symbol means greater than
   - symbol means less than
   
-1.To list out all file where file size is over 
+1.To list out all file where file size is over 200kb
+--
+<pre>
+$ find / -type f -size +200k | wc -l
+</pre>
+2.To list out all file where file size is less then 200kb
+--
+<pre>
+$ find / -type f -size -200k | wc -l
+</pre>
+3.To list out all file where file size is 200kb
+--
+<pre>
+$ find / -type f -size 200k | wc -l
+</pre>
+4.To list out all file where file size is greater then 200kb but less then 4MB
+--
+<pre>
+$ find / -type f -size +200k -size -4M | wc -l
+</pre>
+5.To list out all file where file size is greater then 200kb but less then 4MB
+--
+<pre>
+$ find / -type f -size +200k -size -4M | wc -l
+</pre>
+6.To list out all file where file size is less then 200kb but more then 4MB
+--
+<pre>
+$ find / -type f -size -200k -size +4M | wc -l      &#10008;
+</pre>
