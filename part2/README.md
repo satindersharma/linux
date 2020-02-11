@@ -400,4 +400,36 @@ $ find / -type f -size +200k -size -4M | wc -l
 --
 <pre>
 $ find / -type f -size -200k -size +4M | wc -l      &#10008;
+This give output 0
+It will find all files where file size is less then 200kb but more then 4MB, there is no chance of existing such type of file. henc answer is zero.
 </pre>
+
+-empty option:
+---
+To find only empty files and directories
+$ find -type f -empty   ->      It will list all empty files.
+
+how to use search result of find command:
+--
+we can perform any expression like cp mv rm etc on the result of find command. for this we have to use -exec option.
+-exec means execution:
+To copy all files present in etc folder where file size is less than 2kb to dir1 present in desktop.
+<pre>
+$ find /etc -type f -size -2k -exec cp {} dir1 \;
+</pre>
+(\; must use the backward slash and semicolon to end the execution)
+before performing required copy operation if we want confirmation then we should use -OK option in palace of -exec option
+<pre>
+$ find /etc -type f size -2k -OK cp {} dir1 \;
+</pre>
+
+
+|                                                 find                                                 |                                                       locate                                                      |
+|:----------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:|
+|           It searches directories in the file system for the required files and directories          |                         It searches in the database for the required file and directories                         |
+|           find command has number of options and easy to cutomise based on our requirement           |                                         locate command has very few option                                        |
+|          we can find file based on name, type, size, depth, age, user, group and permission          |                                we can find files only based on name and permission                                |
+|                                   we can reduce the depth of search                                  |                                        we can't reduce the depth of search                                        |
+| find command won't produce deleted files in search result as it searches directly in the file system | locate command may produce deleted files in search result as it searches in the database which may not be updated |
+|                       These is a way to use search result by using -exec option                      |                                   There is no directly way to use search result                                   |
+|                                     find command operates slowly                                     |                                           locate command operates fastly                                          |
