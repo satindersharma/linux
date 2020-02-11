@@ -423,13 +423,12 @@ before performing required copy operation if we want confirmation then we should
 $ find /etc -type f size -2k -OK cp {} dir1 \;
 </pre>
 
-
 |                                                 find                                                 |                                                       locate                                                      |
 |:----------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:|
-|           It searches directories in the file system for the required files and directories          |                         It searches in the database for the required file and directories                         |
-|           find command has number of options and easy to cutomise based on our requirement           |                                         locate command has very few option                                        |
-|          we can find file based on name, type, size, depth, age, user, group and permission          |                                we can find files only based on name and permission                                |
-|                                   we can reduce the depth of search                                  |                                        we can't reduce the depth of search                                        |
+| It searches directories in the file system for the required files and directories                    | It searches in the database for the required file and directories                                                 |
+| find command has number of options and easy to cutomise based on our requirement                     | locate command has very few option                                                                                |
+| we can find file based on name, type, size, depth, age, user, group and permission                   | we can find files only based on name and permission                                                               |
+| we can reduce the depth of search                                                                    | we can't reduce the depth of search                                                                               |
 | find command won't produce deleted files in search result as it searches directly in the file system | locate command may produce deleted files in search result as it searches in the database which may not be updated |
-|                       These is a way to use search result by using -exec option                      |                                   There is no directly way to use search result                                   |
-|                                     find command operates slowly                                     |                                           locate command operates fastly                                          |
+| These is a way to use search result by using -exec option                                            | There is no directly way to use search result                                                                     |
+| find command operates slowly                                                                         | locate command operates fastly                                                                                    |
