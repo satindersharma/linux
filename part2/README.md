@@ -423,6 +423,8 @@ before performing required copy operation if we want confirmation then we should
 $ find /etc -type f size -2k -OK cp {} dir1 \;
 </pre>
 
+### difference bitween find and locate command:
+
 |                                                 find                                                 |                                                       locate                                                      |
 |:----------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:|
 | It searches directories in the file system for the required files and directories                    | It searches in the database for the required file and directories                                                 |
@@ -432,3 +434,71 @@ $ find /etc -type f size -2k -OK cp {} dir1 \;
 | find command won't produce deleted files in search result as it searches directly in the file system | locate command may produce deleted files in search result as it searches in the database which may not be updated |
 | These is a way to use search result by using -exec option                                            | There is no directly way to use search result                                                                     |
 | find command operates slowly                                                                         | locate command operates fastly                                                                                    |
+
+
+## Compression and Uncompression of files (tar, gzip, gunzip, bzip2, bunzip2)
+Its a part of admin activity. it is very common requirment to pack and commpress a group of files. The main advantage are:
+1.It improves memory utilization
+2.Transpotaion will become very easy.
+3.It reduces download times  -etc
+These process involves the following two activites
+1.creation of archive files
+2.Applying Compression algorithim on that archive file
+
+#### Creation of Archive files:
+
+We can group multiple files and directories into a single archive files by using tar command.
+tar   -->     tape archive
+
+1.To create tar file:
+--
+<pre>
+$ tar -cvf demo.tar file1.txt file2.txt file3.txt
+$ tar -cvf demo.tar *
+</pre>
+
+2.To display table of content of tar file:
+--
+<pre>
+$ tar -tvf demo.tar
+</pre>
+
+2.To extract of content of tar file:
+--
+<pre>
+$ tar -xvf demo.tar
+</pre>
+
+#### Compression algorithm on the tar file:
+There are multiple compression and decompression algorithm
+1. gzip   ->    less compression but more performance
+2.bzip2   ->    more compression but less performance
+
+Compression and decompression by using gzip
+---
+1.To compress tar file:
+--
+<pre>
+$ gzip demo.tar       ---->         demo.tar.gz
+</pre>
+2.To uncompress gz file:
+--
+<pre>
+$ gunzip demo.tar.gz       ---->         demo.tar
+</pre>
+
+
+Compression and decompression by using bzip2
+---
+1.To compress tar file:
+--
+<pre>
+$ bzip2 demo.tar       ---->         demo.tar.bz2
+</pre>
+2.To uncompress gz file:
+--
+<pre>
+$ bunzip2 demo.tar.bz2       ---->         demo.tar
+</pre>
+
+##### How to create a tar file and compress in a single command
