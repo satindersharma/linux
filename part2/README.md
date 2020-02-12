@@ -539,3 +539,88 @@ We can use grep command to search for the given pattren in a single or multiple 
 It prints all matched lines.
 
 
+1.To search data in a single file:
+--
+<pre>
+$ grep "Durga" subjects.txt
+$ grep Durga subjects.txt
+It prints all matched lines. This line which contains mached pattrens.
+</pre>
+
+2.To search data in a mulitple file:
+--
+<pre>
+$ grep "Durga" subjects.txt subjects2.txt
+$ grep Durga *
+It ignore directroies and only in the file it will search.
+</pre>
+
+3.To search data by ignoring case:
+--
+<pre>
+$ grep -i "Durga" subjects.txt
+It ignore case.
+</pre>
+
+4.To display no of occurance:
+--
+<pre>
+$ grep -c "Durga" *.txt
+</pre>
+
+5.To display line no before result:
+--
+<pre>
+$ grep -n "Durga" *.txt
+</pre>
+
+6.To display filename in which pattren present:
+--
+<pre>
+$ grep -l "Durga" *.txt
+</pre>
+
+7.To print all lines except matched lines:
+--
+<pre>
+$ grep -v "Durga" *.txt
+</pre>
+
+8.To search for exact word in the file:
+--
+<pre>
+$ grep -w linux demo.txt
+</pre>
+
+9.Display before, after and surrounding line including matched pattren:
+--
+
+we have ot use -A, -B and -C option
+-A means After
+-B means Before
+-C means Before and After
+<pre>
+$ grep -A 'linux' demo.txt
+$ grep -B 'linux' demo.txt
+$ grep -C 2 'linux' demo.txt    (It will display matched pattern with two above and below lines of that pattern. Here -C is optional)
+$ grep -2 'linux' demo.txt
+If we are not specifiing A,B,C option explicitly by default C will be considered.
+</pre>
+
+Search for multiple content in the given file.
+---
+<pre>
+$ grep -i -e 'python' -e 'java' demo.txt
+</pre>
+egrep:
+---
+
+Instead of using -e option we can use egrep command directly. It is extended grep. It interpret pattrens as extended regular expression.
+<pre>
+$ egrep -i "(java | python)" subject.txt
+</pre>
+
+grep      ->    regular expression but not all pattrens
+egerp     ->    all pattrens
+fgrep     ->    fixed string only
+
