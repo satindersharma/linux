@@ -501,4 +501,41 @@ $ bzip2 demo.tar       ---->         demo.tar.bz2
 $ bunzip2 demo.tar.bz2       ---->         demo.tar
 </pre>
 
-##### How to create a tar file and compress in a single command
+##### How to create a tar file and compress in a single command  (use z and j in tar command)
+###### By using gzip compression algorithm
+1.To create tar file and perform compression:
+--
+<pre>
+$ tar -cvzf demo.tar file1.txt file2.txt file3.txt    (this will create and commpress and return demo.tar.gz)
+</pre>
+
+
+2.To uncompress and extract of content of tar.gz file:
+--
+<pre>
+$ tar -xvzf demo.tar.gz          (this will uncompress and extract and return demo content)
+</pre>
+
+###### By using bzip2 compression algorithm
+1.To create tar file and perform compression:
+--
+<pre>
+$ tar -cvjf demo.tar file1.txt file2.txt file3.txt    (this will create and commpress and return demo.tar.bz2)
+</pre>
+
+
+2.To uncompress and extract of content of tar.bz2 file:
+--
+<pre>
+$ tar -xvjf demo.tar.bz2          (this will uncompress and extract and return demo content)
+</pre>
+
+#### grep command
+grep stand for 
+globally search a regular expression and print it
+global regular expression print
+global regular expression parser
+We can use grep command to search for the given pattren in a single or multiple files.
+It prints all matched lines.
+
+
