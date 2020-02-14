@@ -624,3 +624,34 @@ grep      ->    regular expression but not all pattrens
 egerp     ->    all pattrens
 fgrep     ->    fixed string only
 
+grep with -F option or fgrep:
+---
+fgrep     ->     fixed string global regular expression print.
+It will take a group of fixed strings and search for these in the given file.
+<pre>
+$ grep -F "java
+>python
+>Unix" subjects.txt
+</pre>
+Insead of using -F option we can use fgrep command directly.
+<pre>
+$ fgrep "java
+>python
+>Unix" subjects.txt
+</pre>
+
+
+grep vs egrep vs fgrep:
+---
+Noreaml grep can undersatand regular expression but not every pattren. But egrep can understand regular expression and every pattren.
+[0-9]   ->    This regular expression can be understand by grep and egrep command.
+(java|linux)  ->  This regular expression can be understand by only egrep but not grep command.
+fgrep can be used only for fixed number of string and cannot be used for regular expression.
+
+To display matched pattren instead of total lines:
+--
+<pre>
+$ grep -o c[aeiou]ll demo.txt   -> this wil preint a=only matched pattren(like call cill coll etc)
+</pre>
+
+Q. Write grep command to extract only mobile no and save to moblie.txt
