@@ -655,3 +655,156 @@ $ grep -o c[aeiou]ll demo.txt   -> this wil preint a=only matched pattren(like c
 </pre>
 
 Q. Write grep command to extract only mobile no and save to moblie.txt
+--
+<pre>
+$ grep -o '[0-6][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]' input.txt > mobile.txt
+$ grep -o '[0-6][0-9]{9}' input.txt > mobile.txt    -> it won't work      grep command don't understand {9}
+$ egrep -o '[0-6][0-9]{9}' input.txt > mobile.txt
+</pre>
+
+To search into all files inside a directory (by using -F):
+---
+<pre>
+$ egrep -o -R '[6-9][0-9]{9}' resumes
+</pre>
+
+###### Assignment1:
+
+###### Save all running process information inside a file named with result.txt
+<pre>
+$ Ps -ef > results.txt
+</pre>
+Display all lines which  contains 'lib'
+---
+<pre>
+$ grep 'lib' results.txt
+</pre>
+Display all lines which dosn't contains 'lib'
+---
+<pre>
+$ grep -v 'lib' results.txt
+</pre>
+count all lines which  contains 'lib'
+---
+<pre>
+$ grep  -c 'lib' results.txt
+</pre>
+Display all lines which  contains 'lib' and proceding with line no.
+---
+<pre>
+$ grep -n 'lib' results.txt
+</pre>
+Display all lines which dosn't contains 'lib' but only top 5 lines
+---
+<pre>
+$ grep -v 'lib' results.txt | head -5
+</pre>
+
+###### Assignment2:
+
+Display all employes data of admin department
+---
+<pre>
+$ grep 'admin' emp.dat
+</pre>
+
+Display all employes data of admin and sales department
+---
+<pre>
+$ egrep '(admin|sales)' emp.dat
+</pre>
+
+Display all male employes data of admin and sales department
+---
+<pre>
+$ egrep '(admin|sales)' emp.dat | grep -w 'male'
+</pre>
+
+
+
+##### Type of Regular Expression/Pattren:
+All regular expression pattern are devied into 3 types:
+1. Character    2. word     3. line
+
+Character pattern:
+--
+<pre>
+$ grep 'd*' demo.txt    ->    It will display all lines which contain d following by any no of character.
+In ubuntu these feature is not supporting
+</pre>
+<pre>
+$ grep 'c[aeiou]ll' demo.txt   -> this wil search for matched pattren(like call cill coll etc)
+</pre>
+<pre>
+$ grep 'b..l' demo.txt   -> . means any character. It will search for all four letter where first letter should be b and last letter should be l
+</pre>
+
+word pattren:
+--
+\<word\>    ->    It will display all the lines which contains the specified word. It is exactly same as 
+$ grep -w 'word' result.txt     (independent word)
+\<xyz    ->    It will display all the word start with xyz.
+xyz\>    ->    It will display all the word end with xyz.
+
+line pattren:
+---
+^   ->    line start with
+$   ->    line end with
+
+<pre>
+$ grep '^d' demo.txt    ->      the line start with word d.
+</pre>
+<pre>
+$ grep '^the' demo.txt    ->      the line start with word the.
+</pre>
+<pre>
+$ grep '\<the\>' demo.txt    ->      the line start with word 'the' (exactly 'the').
+</pre>
+<pre>
+$ grep '^[aeiou]' demo.txt    ->      the display line start with vowel.
+</pre>
+<pre>
+$ grep '^[^aeiou]' demo.txt    ->      the display line not start with vowel.
+here ^(means start with)[^(but if inside like this then it means not)aeiou]
+</pre>
+<pre>
+$ grep 't$' demo.txt    ->      the display line end with word t.
+</pre>
+<pre>
+$ grep '[aeiou]$' demo.txt    ->      the display line end with word vowel.
+</pre>
+<pre>
+$ grep '[0-9]$' demo.txt    ->      the display line end with word digit.
+</pre>
+<pre>
+$ grep '^unix$' demo.txt    ->      It will display all line where total line contains should be unix.
+</pre>
+<pre>
+$ grep '^....$' demo.txt    ->      It will display all line where line contains is exactly 4 character.
+</pre>
+<pre>
+$ grep '^\.' demo.txt    ->      It will display all line start with . symbol
+</pre>
+<pre>
+$ grep '\$$' demo.txt    ->      It will display all line ebd with $ symbol
+(here \$ will look for $)
+</pre>
+<pre>
+$ grep '^$' demo.txt    ->      It will display all blank line
+</pre>
+<pre>
+$ grep -v '^$' demo.txt    ->      It will display all blank line
+</pre>
+
+How to delete blank line present in the given file.
+---
+<pre>
+$ grep -v '^$' demo.txt > test.txt
+$ mv test.txt demo.txt
+
+If we try to do this in one line then we will get following
+--
+$ grep -v '^$' demo.txt > demo.txt
+grep: input file ‘demo.txt’ is also the output
+</pre>
+
