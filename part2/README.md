@@ -808,3 +808,40 @@ $ grep -v '^$' demo.txt > demo.txt
 grep: input file ‘demo.txt’ is also the output
 </pre>
 
+###### Advanced pattern supported by egrep but not grep
+
+1. (|)    ->    matches any of the string in the given pattren
+2. {m}    ->    matches exactly m no. of proceding character
+3. {m,n}  ->    the proceding character should match within m times maximum and n times minimum
+4. {m,}  ->    minimum m times but o restriction on maximum
+
+Q1. Write grep command to retrive date values present in the given input fileswhich values are in the form of dd-mm-yyyy or dd/mm/yyyy (like 02-11-1996 or 07/01/1999)
+---
+<pre>
+$ grep -o '\<[0123][0-9][-/][01][0-9][-/][0-9]{4}\>' input.txt
+</pre>
+
+Q2. Write grep command to count no. of directories precent in the currunt working directory
+---
+<pre>
+$ ls -l | grep '^d' | wc -l
+$ ls -F | grep '/$' | wc -l
+</pre>
+
+Q3. Write grep command to count no. of files present in the currunt working directory
+---
+<pre>
+$ ls -l | grep '^-' | wc -l
+</pre>
+
+Q4. Write grep command to count no. of link files(@) present in the /etc directory
+---
+<pre>
+$ ls -F /etc | grep '@$' | wc -l
+</pre>
+
+Q5. Write grep command to count no. of exicutable files(@) present in the /bin directory
+---
+<pre>
+$ ls -F /bin | grep '*$' | wc -l
+</pre>
