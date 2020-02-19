@@ -718,4 +718,39 @@ $ rev demo.txt
 Note:    cat command will display total file conntent at a time. It is best suitable for small file. If the file cotains 1000 of lines then it is not recommended to use cat command. We should go for head, tail, more and less command.
 
 head command
+--
+We can use head command to view top few lines of contents.
+$ head demo.txt         ->          It will display top 10 lines of demo.txt
+$ head -n 5 file.txt    or    $ head -n 5 file.txt    -> to display top 5 lines of file. Instead of 5, we can use any no.
+$ head -n -5 file.txt   ->          To display all lines of file.txt except last 5 lines.
+$ head -c -5 file.txt   ->          To display first 5 characters of file.txt i.e to display first 5 bytes of the file.
+Note:       In linux each character, every character requires 1 bytes of memory hence the no of character and no of bytes are same.
 
+tail command:
+--
+We can use tail command to view few lines from bottom of the file. It is opposite to head command.
+$ tail file.txt         ->          To display last 10 lines.
+$ tail -n 5 file.txt    or       $ tail -5 file.txt   or            $ tail -n -5 file.txt       ->          Display last lines
+$ tail -c -5 file.txt         ->          It will display last 5 character of the file i.e it will display last 5 bytes content of the file.
+
+more command:
+--
+By using command we can view file content page by page only in forward direction.
+$ more file.txt
+It will display 1st page, 
+enter key         ->    to view next line
+spacebar key      ->    to view next page
+q key             ->    to quit
+
+$ more -d file.txt      -d    option means for providing details line
+
+less command:
+--
+By using more command we can view file content page by page only in forward direction. If we wnat to move either in forward direction or in backword direction then we should go for less command.
+$ less command          ->          It will display 1st page by default
+d           ->          to go to next page(d means down)
+b           ->          means backword direction(b means backword)
+q           ->          to quit
+
+Q. Assume a file content enough data . write command to display from 3rd line to 7th line.
+$ head -7 file.txt | tail -5
