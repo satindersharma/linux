@@ -754,3 +754,42 @@ q           ->          to quit
 
 Q. Assume a file content enough data . write command to display from 3rd line to 7th line.  
 $ head -7 file.txt | tail -5  
+
+Creation of hidden files and directories:
+---
+
+If any file start with . (dot) such type of file is called hidden file. If we don't want to display te files in normal listing then we have to go for hidden files. Hdden files are ment for the the hiding data. All system files which are internally required by kernal are hidden files.
+We can create hidden files just like normal files. Only difference is file name should start with . (dot)
+$ touch . db_info       $ cat . db_info
+Even by using editor also we can create hidden files.
+we can create hidden directories also just like normal directories.
+$ mkdir .db1
+
+note:
+--
+By using hiden file and directroies we may not get full security.
+To make more secure we hoave to use proper permissions.
+For this we should use
+interconversion of normal file and the hidden files based on our requirment.
+we can convert normal file as hidden file and vise virsa
+$ mv demo.txt .demo.txt       ->          converts normal file to hidden file
+$ mv .demo.txt demo.txt       ->          converts hidden file to normal file
+
+comparison of files:
+---
+we can compare data of the files by using the following commands.
+1. cmp            2. diff     3. sdiff          4. vimdiff        5. comm
+
+cmp command:
+--
+It will compare bytes by bytes.
+$ cmp file1.txt file2.txt           ->          If the content is the same then we won't get any output. If the content is different then it provides information about only first differnce. byte no and line no will be provided.
+$ cmp a.txt b.txt
+note:
+--
+cmp command don't show all differnce and show only first difference.
+
+diff command:
+--
+It will show all differnce in the content.
+$ diff file1.txt file2.txt           ->         If the content is same no output. If the content is different then it will show all diffrences
