@@ -746,11 +746,11 @@ $ more -d file.txt      -d    option means for providing details line
 
 less command:
 --
-By using more command we can view file content page by page only in forward direction. If we wnat to move either in forward direction or in backword direction then we should go for less command.
-$ less command          ->          It will display 1st page by default
-d           ->          to go to next page(d means down)
-b           ->          means backword direction(b means backword)
-q           ->          to quit
+By using more command we can view file content page by page only in forward direction. If we wnat to move either in forward direction or in backword direction then we should go for less command.  
+$ less command          ->          It will display 1st page by default  
+d           ->          to go to next page(d means down)  
+b           ->          means backword direction(b means backword)  
+q           ->          to quit  
 
-Q. Assume a file content enough data . write command to display from 3rd line to 7th line.
-$ head -7 file.txt | tail -5
+Q. Assume a file content enough data . write command to display from 3rd line to 7th line.  
+$ head -7 file.txt | tail -5  
