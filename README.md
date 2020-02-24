@@ -575,174 +575,174 @@ create this directory stucture.
 
 1st.way:
 --
-$ mkdir x y
-$ cd x
-$ mkdir x1 x2
-$ cd ../..
-$ cd y
-$ mkdir y1 y2
-$ cd y1
-$ mkdir y11 y12
+$ mkdir x y 
+$ cd x 
+$ mkdir x1 x2 
+$ cd ../.. 
+$ cd y 
+$ mkdir y1 y2 
+$ cd y1 
+$ mkdir y11 y12 
 
 2nd.way:
 --
-$ mkdir x y x/x1 x/2 x/x1/x11 x/x1/x12 y/y1 y/y2 y/y1/y11 y/y1/y12
+$ mkdir x y x/x1 x/2 x/x1/x11 x/x1/x12 y/y1 y/y2 y/y1/y11 y/y1/y12 
 
 3rd.way:
 --
-$ mkdir -p x/2 x/x1/x11 x/x1/x12 x/x2 y/y1/y11 y/y1/y12 y/y2
+$ mkdir -p x/2 x/x1/x11 x/x1/x12 x/x2 y/y1/y11 y/y1/y12 y/y2 
 
 4th.way:
 --
-$ mkdir -p x/x{1,2} x/x1/x1{1,2} y/y{1,2} y/y1/y1{1,2}
+$ mkdir -p x/x{1,2} x/x1/x1{1,2} y/y{1,2} y/y1/y1{1,2} 
 
 Absolute path vs Relative path:
 ----
-Absolute path: It is the path from root(/) to destination i.e it is complete path.
-Relative path: It is the path from currunt working directory to destination. It is alway retlative to currunt location.
+Absolute path: It is the path from root(/) to destination i.e it is complete path. 
+Relative path: It is the path from currunt working directory to destination. It is alway retlative to currunt location. 
 
-$ mkdir -p x/x{1,2} x/x1/x1{1,2} y/y{1,2} y/y1/y1{1,2}
-Assume we are in x11 directory to change to y2 directory:
-Absolute path: $ cd /home/satyam/y/y2
-               $ ~/y/y2
-Relative path: $ ./../../../y/y2
-               $ ../../../y/y2
+$ mkdir -p x/x{1,2} x/x1/x1{1,2} y/y{1,2} y/y1/y1{1,2} 
+Assume we are in x11 directory to change to y2 directory: 
+Absolute path: $ cd /home/satyam/y/y2 
+               $ ~/y/y2 
+Relative path: $ ./../../../y/y2 
+               $ ../../../y/y2 
 
-Assume we are in y2 directory to change to x11 directory:
-Absolute path: $ cd /home/satyam/x/x1/x11
-               $ ~/x/x1/x11
-Relative path: $ ./../../../x/x1/x11
-               $ ../../../x/x1/x11
+Assume we are in y2 directory to change to x11 directory: 
+Absolute path: $ cd /home/satyam/x/x1/x11 
+               $ ~/x/x1/x11 
+Relative path: $ ./../../../x/x1/x11 
+               $ ../../../x/x1/x11 
 
 Copy command(cp):
 ---
-1. To copy from file1.txt to file2.txt
-$ cp file1.txt file2.txt
+1. To copy from file1.txt to file2.txt 
+$ cp file1.txt file2.txt 
 
-2. To copy file to directory:
-$ cp file1.txt file2.txt file3.txt output
+2. To copy file to directory: 
+$ cp file1.txt file2.txt file3.txt output 
 
-3. To copy all files of 1 directory to another directory:
-Assume dir1 contains a.txt b.txt
-copy all files of dir1 to dir2
-$ cp dir1/* dir2  (but complsury dir1 should be available already)
+3. To copy all files of 1 directory to another directory: 
+Assume dir1 contains a.txt b.txt 
+copy all files of dir1 to dir2 
+$ cp dir1/* dir2  (but complsury dir1 should be available already) 
 
-4. To copy total directories to another directories.
+4. To copy total directories to another directories. 
 Whenerver we are copying total directories to another directories by usin cd command, we should use -r option(either -r or -R).
-$ cp -r dir1 dir2
+$ cp -r dir1 dir2 
 
-$ cp dir1 dir2    (if we don't use -r then the follwong error occur)
-cp: -r not specified; omitting directory 'dir1'
+$ cp dir1 dir2    (if we don't use -r then the follwong error occur) 
+cp: -r not specified; omitting directory 'dir1' 
 Note: If the destination directory is already available then total dir1 will be copied to dir2.
-If the destination directory dir2 is not already avaible then dir2 will be reated and all files of dir1 will be copied to dir2, but dir1 won't be copied.
+If the destination directory dir2 is not already avaible then dir2 will be reated and all files of dir1 will be copied to dir2, but dir1 won't be copied. 
 
 
 Moving and Renaming of directories:
 ---
-both moving and renaming activities can be performed by using single command mv.
+both moving and renaming activities can be performed by using single command mv. 
 
-1. Renaming of files:
-$ mv file1.txt file2.txt            ->    file1.txt will be renamed to file2.txt
+1. Renaming of files: 
+$ mv file1.txt file2.txt            ->    file1.txt will be renamed to file2.txt 
 
-2. Renaming of directories:
-$ mv dir1 dir2          ->          dir1 renamed to dir2
+2. Renaming of directories: 
+$ mv dir1 dir2          ->          dir1 renamed to dir2 
 
-3. moving of files to some other directory:
-$ mv file1.txt file2.txt file3.txt output
+3. moving of files to some other directory: 
+$ mv file1.txt file2.txt file3.txt output 
 
-4. moving all files of one directories to another directories:
-mv dir1/* dir2          -> all files of dir1 will be moved to dir2 after excuting these command dir1 will become empty.
+4. moving all files of one directories to another directories: 
+mv dir1/* dir2          -> all files of dir1 will be moved to dir2 after excuting these command dir1 will become empty. 
 
-5. moving total directory to another directory:
-$ mv dir1 dir2
-Note:
-If dir2 is not available then renmaing opreation will be performed
+5. moving total directory to another directory: 
+$ mv dir1 dir2 
+Note: 
+If dir2 is not available then renmaing opreation will be performed 
 
 Working with files
 ---
-1. creations of files:
-In linux we can create files in the following ways:
-1. by using touch command
-2. by using cat command
-3. by using editors like gedit, vi, name etc.
+1. creations of files: 
+In linux we can create files in the following ways: 
+1. by using touch command 
+2. by using cat command 
+3. by using editors like gedit, vi, name etc. 
 
 cat command:
 --
-$ cal > fil1.txt        -> this will overwrite
- some content
- press ctrl+d           -> to save and exit
+$ cal > fil1.txt        -> this will overwrite 
+ some content 
+ press ctrl+d           -> to save and exit 
+  
+ If fil1.txt is not already  available then it will be created with our provided data. 
+ If fil1.txt is already available with some data then it will be overwritten with our provided data. 
  
- If fil1.txt is not already  available then it will be created with our provided data.
- If fil1.txt is already available with some data then it will be overwritten with our provided data.
- 
-Instead of overwriting if we want to append operation then we should use  >>  with cat command.
+Instead of overwriting if we want to append operation then we should use  >>  with cat command. 
 
-$ cal >> fil1.txt        -> this will append the data
- some content
- press ctrl+d           -> to save and exit
+$ cal >> fil1.txt        -> this will append the data 
+ some content  
+ press ctrl+d           -> to save and exit 
  
 touch command:
 --
-we can use touch command to create empty file.
-$ touch demo.txt  ->    empty file will created.
-Q. If we are using touch command but the file already available with some contains then what will happend?
-The content of the file won't be changed but last modified data and time(i.e timestamp) will be updated.
+we can use touch command to create empty file. 
+$ touch demo.txt  ->    empty file will created. 
+Q. If we are using touch command but the file already available with some contains then what will happend? 
+The content of the file won't be changed but last modified data and time(i.e timestamp) will be updated. 
 
-Note: we can use touch command for the following 2 purposes:
-1.    To crreate an empty file.           2.    To change timestamp of existing file
+Note: we can use touch command for the following 2 purposes: 
+1.    To crreate an empty file.           2.    To change timestamp of existing file 
 
 View or display contents of the file:
 --
-We can view contents of the files by using the following commands.
-1. cat      2. tac      3. rev      4. head     5. tail     6. more     7. less
+We can view contents of the files by using the following commands. 
+1. cat      2. tac      3. rev      4. head     5. tail     6. more     7. less 
 
-$ cat < file.txt or $cat file.txt   (< symbol is optional)
-while display file contents we can include line no by using -n option.
-$ cat -n demo.txt
+$ cat < file.txt or $cat file.txt   (< symbol is optional) 
+while display file contents we can include line no by using -n option. 
+$ cat -n demo.txt 
 
-while display contents we can skip blank lines -b option.
-$ cat -nb demo.txt      ->    numbering for blank line won't be there.
+while display contents we can skip blank lines -b option. 
+$ cat -nb demo.txt      ->    numbering for blank line won't be there. 
 
-We can view multiple files contents at a time by using cat command
-$ cat a.txt b.txt c.txt
+We can view multiple files contents at a time by using cat command 
+$ cat a.txt b.txt c.txt 
 
 tac command:
 ---
-It is the reverse of cat. It will display file contents in reverse order of lines i.e 1st line become last line. last line become first line.
-$ tac file1.txt
+It is the reverse of cat. It will display file contents in reverse order of lines i.e 1st line become last line. last line become first line. 
+$ tac file1.txt 
 
 rev command:
 --
-rev means reverse. There each line contents will be reverse. It is horizintal reverse.
-$ rev demo.txt
-Note:    cat command will display total file conntent at a time. It is best suitable for small file. If the file cotains 1000 of lines then it is not recommended to use cat command. We should go for head, tail, more and less command.
+rev means reverse. There each line contents will be reverse. It is horizintal reverse. 
+$ rev demo.txt 
+Note:    cat command will display total file conntent at a time. It is best suitable for small file. If the file cotains 1000 of lines then it is not recommended to use cat command. We should go for head, tail, more and less command. 
 
 head command
 --
-We can use head command to view top few lines of contents.
-$ head demo.txt         ->          It will display top 10 lines of demo.txt
-$ head -n 5 file.txt    or    $ head -n 5 file.txt    -> to display top 5 lines of file. Instead of 5, we can use any no.
-$ head -n -5 file.txt   ->          To display all lines of file.txt except last 5 lines.
-$ head -c -5 file.txt   ->          To display first 5 characters of file.txt i.e to display first 5 bytes of the file.
-Note:       In linux each character, every character requires 1 bytes of memory hence the no of character and no of bytes are same.
+We can use head command to view top few lines of contents. 
+$ head demo.txt         ->          It will display top 10 lines of demo.txt 
+$ head -n 5 file.txt    or    $ head -n 5 file.txt    -> to display top 5 lines of file. Instead of 5, we can use any no. 
+$ head -n -5 file.txt   ->          To display all lines of file.txt except last 5 lines. 
+$ head -c -5 file.txt   ->          To display first 5 characters of file.txt i.e to display first 5 bytes of the file. 
+Note:       In linux each character, every character requires 1 bytes of memory hence the no of character and no of bytes are same. 
 
 tail command:
 --
-We can use tail command to view few lines from bottom of the file. It is opposite to head command.
-$ tail file.txt         ->          To display last 10 lines.
-$ tail -n 5 file.txt    or       $ tail -5 file.txt   or            $ tail -n -5 file.txt       ->          Display last lines
-$ tail -c -5 file.txt         ->          It will display last 5 character of the file i.e it will display last 5 bytes content of the file.
+We can use tail command to view few lines from bottom of the file. It is opposite to head command. 
+$ tail file.txt         ->          To display last 10 lines. 
+$ tail -n 5 file.txt    or       $ tail -5 file.txt   or            $ tail -n -5 file.txt       ->          Display last lines 
+$ tail -c -5 file.txt         ->          It will display last 5 character of the file i.e it will display last 5 bytes content of the file. 
 
 more command:
 --
-By using command we can view file content page by page only in forward direction.
-$ more file.txt
-It will display 1st page, 
-enter key         ->    to view next line
-spacebar key      ->    to view next page
-q key             ->    to quit
+By using command we can view file content page by page only in forward direction. 
+$ more file.txt 
+It will display 1st page,  
+enter key         ->    to view next line 
+spacebar key      ->    to view next page 
+q key             ->    to quit 
 
-$ more -d file.txt      -d    option means for providing details line
+$ more -d file.txt      -d    option means for providing details line 
 
 less command:
 --
