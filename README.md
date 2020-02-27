@@ -793,3 +793,39 @@ diff command:
 --
 It will show all differnce in the content.
 $ diff file1.txt file2.txt           ->         If the content is same no output. If the content is different then it will show all diffrences
+for the diff command we can use the following option:
+-q show message when file are differnt
+-s shows message when files are same or identical
+-y show comparision line by line (parllel comparision)
+$ diff -q file1.txt file2.txt
+$ diff -s file1.txt file2.txt
+$ diff -y file1.txt file2.txt
+
+If we want to suppress command lines then we should use
+--suppress -common-lines option with -y option
+$ diff -q --suppress -common -lines file1.txt file2.txt
+
+sdiff command:
+---
+we can use sdiff command for side by side comparision or parllel comaprision
+
+$ sdiff a.txt b.txt
+
+Note:
+--
+sdiff command and diff command -y option are same.
+
+vimdiff command:
+---
+It will highlight difference in the vim editior. vim editor is advance version of vi editor. by default vim is not availbale in ubuntu. we have to install sepratorly.
+$ sudu apt install vim
+$ vimdiff a.txt b.txt
+ctrl+w+w  -->           to goto next wondow
+:q        -->           close currunt window
+:qq       -->           close all window
+:qq!      -->           close all window forcefully
+
+comm command:
+--
+By using comm commnd we can campare data of two files.
+$ comm file1.txt file2.txt    ->    It will display result in 3 columns.
