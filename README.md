@@ -829,3 +829,68 @@ comm command:
 --
 By using comm commnd we can campare data of two files.
 $ comm file1.txt file2.txt    ->    It will display result in 3 columns.
+
+
+##### Creation of link files:
+
+There are two types of link files:
+1. Hard link files            2. soft link file
+
+Hard link file:
+---
+It is just another name of the same exact file.
+We can create hard file file by using ln command.
+$ ln orignal_file hard_link_file
+example:
+$ ln abc.txt abcln.txt        ->          abc.txt is the orignal file and abcln.txt is the link file
+
+Important conculsion about hard link file:
+---
+1. Both origanl and hard file have the same node no, same size and some timestamp
+2. If one delete orignal file then there is no effect on hard link file.
+
+soft link file:
+---
+A soft link is a pointer to another file. It is just like window's shortcut.
+Itis also known as symbolic link.
+
+We can create soft link file by using ln -s (with -s option)
+ln -s orignal_file soft_file
+
+eg:
+$ ln -s abc.txt abcln.txt           ->          Here abc.txt is original file where abcln.txt is soft link files.
+
+Important conculsion about soft link file:
+--
+1. orignal and soft file have the diffrent node no, defferent size and different timestamp
+2. Usally soft link file have smaller file size then orignal file size.
+3. If on delete orignal file then soft line file will become useless.
+
+link file for directories:
+--
+We can't create hard link for directories becouse it breaks linux file system. Having 2 root directories is meaningless
+$ ln dir1 dirln
+ln : dir1: hard link not allowed for directories
+but we can create soft link fo directories
+$ ln -s dir1 dirln
+Note:
+--
+for files we can create both hard and soft link but for directories we can only create soft link. 
+If we perform any change to the content of orignal file then these changes will be reflected in the link file, similarly if we perform any change to the link file then those changes will be refelcted to the origanl file. 
+This is true for both soft and hard link file. 
+
+word count command(wc):
+---
+We can use wc command to count no of lines, words and characters present in the given file.
+$ wc file.txt
+no_of_lines no_of_words no_of characters filename
+$ wc abc.txt
+4 16 76 abc.txt
+we can use the following option:
+-l    ->    to print only no. of lines
+-w    ->    to print only no. of words
+-c    ->    to print only no. of characters
+-lw   ->    to print only no. of lines and words
+-wc   ->    to print only no. of words and characters
+-l    ->    to print only no. of lines
+-l    ->    to print only no. of lines
