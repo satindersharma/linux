@@ -892,5 +892,40 @@ we can use the following option:
 -c    ->    to print only no. of characters
 -lw   ->    to print only no. of lines and words
 -wc   ->    to print only no. of words and characters
--l    ->    to print only no. of lines
--l    ->    to print only no. of lines
+-L    ->    to print no of characters present in longest line
+
+We can wc comment for multiple files symountanouly
+$ wc abc.txt demo.txt
+   4 78 90 abc.txt
+   3 7 93 demo.txt
+   7 85 183 total
+
+Sorting content of the file:
+--
+We can short data of the file by using sort command.
+$ short a.txt
+If we want to sort based on reverse of alphabetical order, we have to use -r option
+$ short a.txt
+Note: If th efile contains alphanumeric data then first numbers will be consider and then alphabet symbols
+If file contains only numbers then sorting is not based on numeric value but if just based on digit(i.e just first number)
+cat a.txt               sort a.txt                    sort -n a.txt
+11                      11                            2
+2                       2                             7
+7                       222                           9
+222                     7                             11
+9                       9                             222
+If we want to sort based on mumeric, then we have to use -n option, -n means numeric value
+by default sort will display duplicate values, If we want only unique lines then we have to use -u option
+$ sort -u a.txt
+Note: We can also use -ur, -ucn, -unr option also.
+
+To play with unique data, there is speicaal command available uniq
+Sorting tabular data by using -k option:
+---
+-k means KEYDEF (key defination) Based on which key (column) we have to sort.
+sort based on file size in accending order
+$ ls -l /etc | Head | sort -k 5n          (5(5th column)n(numeric value))
+sort on based on month
+6th column provides total date, if we want to consider only month then we should use -k -6M
+$ ls -l /etc | Head | sort -k 6M          (6(6th column)M(Month))
+sort based on 
