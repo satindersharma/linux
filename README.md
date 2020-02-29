@@ -928,4 +928,8 @@ $ ls -l /etc | Head | sort -k 5n          (5(5th column)n(numeric value))
 sort on based on month
 6th column provides total date, if we want to consider only month then we should use -k -6M
 $ ls -l /etc | Head | sort -k 6M          (6(6th column)M(Month))
-sort based on 
+sort based on no of links in decending order
+$ ls -l /etc | Head | sort -k 2nr          (2(2th column)n(numeric value)r(reverse))
+
+find unipe content in the file by using uniq command
+We can use uniq command to display unique in the file, but to use uniq command complsury file should be sorted. Othervise it won't work.
