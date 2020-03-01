@@ -1099,4 +1099,11 @@ $ ls -l | tee output.txt | wc -l
 tee mostly used to just save and send to the next command
 
 
-because
+|            |                            |             |                                              |    |
+|------------|----------------------------|:-----------:|----------------------------------------------|----|
+| ls command | &rarr; output of ls &rarr; | tee command | &rarr; send output of ls commad to wc &rarr; | wc |
+|            |                            |    &darr;   |                                              |    |
+|            |                            |    &darr;   | save output of ls to output.txt              |    |
+|            |                            |  output.txt |                                              |    |
+
+
