@@ -1070,4 +1070,33 @@ By using piping concept multiple command will work together to fulfil our requir
 |-------------:|:---------:|---------------|-------------:|:---------:|---------------------|
 | input &rarr; | command 1 | output &rarr; | &rarr; input | command 2 | &rarr; final output |
 
-We can impliment piping by using virtical bar (|)
+We can impliment piping by using virtical bar ( | )
+
+eg 1:
+$ ls -l /etc | wc
+215 1938 11896
+(first ls command exicuted and output of this command witll become input to wc command.)
+$ ls -l | more          (page by page)
+(first ls command execute and output of this command will be input for more command)
+
+$ ls -l /etc | wc | wc -l           ( output will be 1)
+
+Requirment:
+--
+The output of ls command should be saved to output.txt and should be provided input to wc command.
+
+$ ls -l > output.txt | wc -l                    &#10008;
+
+This command won't work because if we are using redirection in the middle of piping, It will break piping concept.
+In piping If we want to save the output of one command to a file and if we want to pass that output as input to next command symuntanoulsy, then we should go for tee command.
+
+tee command:
+--
+tee command is just like T-Junction or T-Pipe, It will take one input but provides two outputs.
+
+$ ls -l | tee output.txt | wc -l
+
+tee mostly used to just save and send to the next command
+
+
+because
