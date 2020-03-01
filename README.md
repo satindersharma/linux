@@ -1107,3 +1107,5 @@ tee mostly used to just save and send to the next command
 |            |                            |  output.txt |                                              |    |
 
 
+xargs command:
+--
