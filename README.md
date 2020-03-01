@@ -1001,6 +1001,64 @@ echo command will accept only command line arguments.
 ##### Redirection:
 As standard input standard output and standard error are data sream and can flow from 1 place to another place. we can redirect these streams based on our requirment.
 
-redirecting standard output:
+redirecting Standard Output:
 --
+By default standard output connected to terminal or console/terminal
+but we can redirect to new destination. we can perferm output redirection by using > or >> symbol
 
+>           ->          will perform overwritting of existing data
+>>          ->          will perform appending to existing data
+
+eg. To redirect standard output of cat command from terminla to output.txt
+$ cat 1> output.txt           ->          here 1 associated to standard output
+hello there
+ctrl+d
+The output won't display to the terminal and will be written to output.txt
+
+Note:
+--
+Redirection symbol > and >> is always associated with 1 by defalut hence we are not required to specify explicitily
+cat >> output.txt
+there is
+ctrl+d
+
+Redirecting Standard Error:
+--
+By default standard eror attached to terminal but based on our requirement we can redirect from terminal to another new destination. We can perform error redirection by using > and >> symbol
+$ rm file100 2> error.txt           ->          now error message won't dislay to the terminal and will be directed to error.txt
+Note:
+--
+for error redirection 2 is mendatory
+If output and error redircting to the same destination, we can write command as follow
+$ rm file100 &> output.txt          ->          & means both output and error redirection
+
+redirection Standard intput:
+---
+By default standard intput attached to keyboard but based on our requirement we can redirect from keyboard to another new destination. We can perform input redirection by using < symbol
+
+$ cat 0< a.txt 1> output.txt 2> error.txt
+
+< symbol is always associated with 0 by default hence we can ignore it
+
+$ cat < a.txt > output.txt 2> error.txt
+
+tty:
+---
+tty         ->          this will display file related to the currunt terminal
+
+redirecting Standard Output from 1 terminal to another terminal:
+--
+In unix evertyhing is treated as file even terminal also. we can find terminal related file by ysing tty command
+termianl 2:
+$ tty       ->          /dev/pts/1
+terminal 1:
+$ echo "hello l love You" > /dev/pts/1
+$ clear > /dev/pts/1
+
+How to ignore standard output and error message:
+--
+We have to redirect to new device which is representd by /dev/null 
+$ cat a.txt > /dev/null
+$ rm file100 > /dev/null
+
+#### Piping:
