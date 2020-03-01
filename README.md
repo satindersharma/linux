@@ -952,6 +952,55 @@ sort a.txt | uniq -u
 
 |                               |         |                           |
 |------------------------------:|---------|---------------------------|
-|      Standard Input(0) &rarr; |         | Standard Output(1) &rarr; |
+|      Standard Input(0) &rarr; |         | &rarr; Standard Output(1) |
 |                               | Command |                           |
-| Command Line Arguments &rarr; |         | Standard Error(2) &rarr;  |
+| Command Line Arguments &rarr; |         | &rarr; Standard Error(2)  |
+
+
+commands can take some input, perform required option and produces some output
+while excting command if anything goes wrong we will get error message.
+commands can take input either form standard input device or from command line arguments. commands will procude results either to the standard output or standard error.
+Standard input, Standard output and Standard error are data streams and can flow from, palace to another place hence redirection and piping concepts are aplicable.
+
+command line argument are static
+----
+and  these(comand line arguments) are not streams. hence redirection and piping are not applicable.
+
+These data streams are associated with some numbers.
+
+Standard input associated with 0
+Standard output associated with 1
+Standard error associated with 2
+
+By default:
+Standard input connected with keyboard
+Standard output connected with console/terminal
+Standard error connected with console/terminal
+
+Standard input to the keyboard and output to the device:
+for cat command if we are not provides any arguments, then the input will be taken from standard input device (keyboard) and display the output to the standard output device(terminal)
+
+$ cat
+this        ->    it will take input from keyboard
+this        ->    it will display output to terminal
+|           ->    wiating for input
+(press ctlr+d)
+
+input from command line arguments and error message to the standrad error:
+--
+We have to provides file name of command line arguments to run command, if the specified file not availble then we will get error message. Ehich eill display to standard error hence which is nothing but console.
+$ rm file1000
+rm: cannot remove 'file100' . No Such file or directory
+note:
+--
+some command may except any standard input and some command may except command line arguments and some may except both.
+cat command can except input form standard input device and from command line arguments.
+rm command will always accept only command line argument
+echo command will accept only command line arguments.
+
+##### Redirection:
+As standard input standard output and standard error are data sream and can flow from 1 place to another place. we can redirect these streams based on our requirment.
+
+redirecting standard output:
+--
+
