@@ -950,11 +950,11 @@ sort a.txt | uniq -u
 
 #### input and output of commands:
 
-|                               |         |                           |
-|------------------------------:|---------|---------------------------|
-|      Standard Input(0) &rarr; |         | &rarr; Standard Output(1) |
-|                               | Command |                           |
-| Command Line Arguments &rarr; |         | &rarr; Standard Error(2)  |
+|                               |         |                            |
+|------------------------------:|:-------:|----------------------------|
+|      Standard Input(0) &rarr; |         | &rarr; Standard Output(1)  |
+|                               | Command |                            |
+| Command Line Arguments &rarr; |         | &rarr; Standard Error(2)   |
 
 
 commands can take some input, perform required option and produces some output
@@ -1062,3 +1062,12 @@ $ cat a.txt > /dev/null
 $ rm file100 > /dev/null
 
 #### Piping:
+Sometimes we can use output of one command as input to another command.
+This concept is called piping.
+By using piping concept multiple command will work together to fulfil our requirement.
+
+|              |           |               |              |           |                     |
+|-------------:|:---------:|---------------|-------------:|:---------:|---------------------|
+| input &rarr; | command 1 | output &rarr; | &rarr; input | command 2 | &rarr; final output |
+
+We can impliment piping by using virtical bar (|)
