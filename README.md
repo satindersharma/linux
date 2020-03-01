@@ -933,3 +933,20 @@ $ ls -l /etc | Head | sort -k 2nr          (2(2th column)n(numeric value)r(rever
 
 find unipe content in the file by using uniq command
 We can use uniq command to display unique in the file, but to use uniq command complsury file should be sorted. Othervise it won't work.
+uniq a.txt              It won't work
+sort a.txt | uniq       it works beause uniq work on sorted data
+
+with uniq command we can use the following option:
+---
+-d          ->          To display only duplicate lines
+-C          ->          To display no. of occurance of each lines
+-c          ->          Ignore case while computing
+-u          ->          To display only unique lines i.e the lines are duplicated
+
+sort a.txt | uniq -d
+sort a.txt | uniq -C
+sort a.txt | uniq -c
+sort a.txt | uniq -u
+
+#### input and output of commands:
+
