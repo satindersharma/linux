@@ -950,3 +950,7 @@ sort a.txt | uniq -u
 
 #### input and output of commands:
 
+|      Standard Input(0) &rarr; |         | Standard Output(1) &rarr; |
+|------------------------------:|---------|---------------------------|
+|                               | Command |                           |
+| Command Line Arguments &rarr; |         | Standard Error(2) &rarr;  |
