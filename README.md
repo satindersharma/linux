@@ -1109,3 +1109,15 @@ tee mostly used to just save and send to the next command
 
 xargs command:
 --
+Q.1 Display the output of date command by using echo command with piping concept.
+data | echo                   &#10008;
+It won't work becouse the output of date command is stream but echo command will accpet only comand line arguments but not stream.
+
+$ date | xargs echo
+
+xargs command will convert the outptu stream of date command into command line arguments and these argumenst will be passed as input to echo command
+Hence the job of xargs command is to convert output stream into command line arguments.
+
+Q.2 Assumem input.txt contains file name, Read file name from input.txt and remove all these files.
+$ cat input.txt | xargs rm
+
