@@ -845,3 +845,17 @@ Q5. Write grep command to count no. of exicutable files(@) present in the /bin d
 <pre>
 $ ls -F /bin | grep '*$' | wc -l
 </pre>
+
+cut command:
+--
+we can use cut command to extract data from the file. The file can be either normal file or tabular file.
+
+table 
+--
+emp.dat
+--
+eno   |   ename   |   esal    |   eaddress    |   dep   |   gender
+100   |   sunny   |   1000    |     mumbai    | admin   |   female
+101   |   vinny   |   2000    |     chennai   | sale    |   male
+102   |   chinny  |   3000    |     hyderbad  | market  |   male
+103   |   bunny   |   2300    |     delhi     | sale    |   male
