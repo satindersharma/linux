@@ -859,3 +859,22 @@ eno   |   ename   |   esal    |   eaddress    |   dep   |   gender
 101   |   vinny   |   2000    |     chennai   | sale    |   male
 102   |   chinny  |   3000    |     hyderbad  | market  |   male
 103   |   bunny   |   2300    |     delhi     | sale    |   male
+
+1.Display character present at specific position in every record:
+---
+We have to use -c option
+-c meant for specific character.
+$ cat -c 5 emp.dat    ->    It will display character at 5th position in every row.
+
+2.Display range of character in every record:
+--
+
+$ cat -c 5-9 emp.dat    ->    It will display 5th to 9th character in every record.
+$ cat -c -4 emp.dat    ->    It will display 1st to 4th character in every record.
+$ cat -c 5-9, 16-19 emp.dat    ->    It will display 5th to 9th character and 16th to 19th character in every record.
+
+3.Display specific column data:
+--
+$ cut -d '|' -f 3 emp.dat
+-d means delimiter (seprator). The default delimiter is tab
+-f mean field (colu
