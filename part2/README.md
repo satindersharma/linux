@@ -912,3 +912,32 @@ delimiter should be only one character, if we are providing more than one charac
 
 tr command:
 --
+
+tr means translate
+These command can be used to translate character by character.
+
+$ tr 'aeiou' 'AEIOU' < demo.txt   =>    it will replace every lower case vowel to upper case vowel.
+
+$ tr '[a-z]' '[A-Z]' < demo.txt   =>    it will replace every lower case alphabet to upper case alphabet.
+
+$ tr '[a-zA-Z]' '[A-Za-z]' < demo.txt   =>    it will replace every lower case alphabet to upper case alphabet and every upper case alphabet to lower case alphabet.
+
+$ tr '[a-zA-Z]' '[A-Za-z]' < demo.txt > temp.txt  =>    it will replace every lower case alphabet to upper case alphabet and every upper case alphabet to lower case alphabet and write to temp.txt.
+
+$ tr 'aeiou' '7' < demo.txt   =>    it will replace every lower case vowel with 7
+
+$ tr '|' '\t' < emp.dat   =>    it will replace every | with tab in emp.dat
+
+-d option 
+-d means delto    it will delete
+
+$ tr -d 'a' < demo.txt   =>    it will remove 'a' from the demo.txt
+
+$ tr -d 'aeiou' < demo.txt   =>    it will remove every lower case vowel
+
+-s option:
+-s means sqeeze repeats
+it will change aa aaa  aaaaa aaaaaaaaa ....     to    a
+
+$ tr -s 'a' < demo.txt   =>    it will replase a sequence of 'a' with a
+
