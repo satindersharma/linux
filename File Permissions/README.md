@@ -125,4 +125,8 @@ If the user not having execute permission on any directory then he can'y perform
 
 #### Linux Vs Security:
 
-The virus file usely created by others. Others are not having write and execute permission on our directory. hence other are not allowed to add virus file to our directires, hence other are not allowed to add virus
+The virus file usely created by others. Others are not having write and execute permission on our directory. hence other are not allowed to add virus file to our directires, hence other are not allowed to add virus file to our directories. Hacker are not having execute permission on our directories hence they can't read our file data.
+Because of these reaso linux in consider as secure operating system.
+Linux follow two level security
+1st level   ->    login with credentials
+2nd level   ->    file and directroy permission
