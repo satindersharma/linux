@@ -12,8 +12,8 @@ With respect to file permissions, all users are categorized into the following 4
 Permission types:
 --
 For files and directories, there are 4 types of permissions
-1. r    ->    read
-2. w    ->    write
-3. x    ->    execute
-4. -    ->    no permission
+1 r    ->    read
+2 w    ->    write
+3 x    ->    execute
+4 -    ->    no permission
 
