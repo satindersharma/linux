@@ -123,4 +123,6 @@ note:
 If the user not having execute permission on any directory then he can'y perform read and write operation also. because to perrom read and write operation he should enter into the directory which is not possible i.e read and write permission without execute permission on the directory become useless.
 
 
+#### Linux Vs Security:
 
+The virus file usely created by others. Others are not having write and execute permission on our directory. hence other are not allowed to add virus file to our directires, hence other are not allowed to add virus
