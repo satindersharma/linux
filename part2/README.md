@@ -875,6 +875,40 @@ $ cat -c 5-9, 16-19 emp.dat    ->    It will display 5th to 9th character and 16
 
 3.Display specific column data:
 --
-$ cut -d '|' -f 3 emp.dat
+$ cut -d '|' -f 3 emp.dat   ->    It will display 3rd column data
 -d means delimiter (seprator). The default delimiter is tab
--f mean field (colu
+-f mean field (column)
+
+4.Disp;ay range of column:
+---
+
+$ cut -d '|' -f 2-3 emp.dat   ->    It will display 2nd column to 4th column data.
+$ cut -d '|' -f 2- emp.dat    ->    It will display 2nd column to last column data.
+$ cut -d '|' -f -3 emp.dat   ->    It will display 1st to 3rd column data.
+$ cut -d '|' -f 1,3,5 emp.dat   ->    It will display 1st, 3rd, 5th column data.
+
+5.Skip specific column:
+---
+
+Display all column except specific column.
+$ cut -d '|' --compliment -f 3 emp.dat   ->    It will display all column data except 3rd column.
+$ cut -d '|' --compliment -f 3-5 emp.dat   ->    It will display all column data except 3rd to 5th column
+$ cut -d '|' --compliment -f 3- emp.dat   ->    It will display all column data except 3rd to last column
+$ cut -d '|' --compliment -f -3 emp.dat   ->    It will display all column data except 1st to 3rd column
+
+paste command:
+--
+
+we can use paste command to join 2 or more files horizentaly by using some delimeter, default delimiter is tab.
+
+$ paste file1 file2 file2 ......
+eg.
+$ paste -d '-' courses.txt fee.txt  =>    two files combines and the delimiter is -
+we can specify our own delimiter by using -d
+$ paste -d ':' courses.txt fee.txt  =>    two files combines and the delimiter is :
+Note:
+--
+delimiter should be only one character, if we are providing more than one character then only first character consider.
+
+tr command:
+--
