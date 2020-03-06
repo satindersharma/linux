@@ -110,14 +110,17 @@ read permission to the directory:
 --
 If the user has read permission on any directory then he can list out the content of that directories i.e he can use ls command.
 
-write permission on the file
+write permission on the directory
 --
-If the user has write permission on any file then is allowed to perform modification to the content of the file.
-If we not having write permission then 
-$ cat >> demo.txt
-cat : demo.txt : permission denied
+If the user has write permission on any directory then he is allowed to modify to the content of the directory i.e he can add new file and remove existing files.
 
-execute permission on the file
+execute permission on the directory
 --
-If the user has execute permission on any file then we can execute that file as a program.
+If the user not having execute permission on any directory then he is not allowed to enter into that directory i.e he can't use cd command.
+
+note:
+--
+If the user not having execute permission on any directory then he can'y perform read and write operation also. because to perrom read and write operation he should enter into the directory which is not possible i.e read and write permission without execute permission on the directory become useless.
+
+
 
