@@ -130,3 +130,24 @@ Because of these reaso linux in consider as secure operating system.
 Linux follow two level security
 1st level   ->    login with credentials
 2nd level   ->    file and directroy permission
+
+
+We are using permission types as r, w and x. These are considerd as symbolic permission, but we can also specify permission by using octal number (base eight) such type of permissions are called numeric permission.
+
+Numeric permission:
+--
+we can specify permission by using octal number. Octal means base-8 and allowed digit are 0 to 7
+
+0     000   -->     No Permission
+1     001   -->     Execute Permission
+2     010   -->     Write Permission
+3     011   -->     Write and Execute Permission
+4     100   -->     Read Permission
+5     101   -->     Read and Execute Permission
+6     110   -->     Read and Write Permission
+7     111   -->     Read, Write and Execute Permission
+
+Note:
+---
+
+4 means Read operation
