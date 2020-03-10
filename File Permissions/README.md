@@ -151,3 +151,88 @@ Note:
 ---
 
 4 means Read operation
+2 means Write operation
+1 means Execute operation
+
+It is more eady to remember
+
+5  --->     4+1   --->    r-x
+3  --->     2+1   --->    -wx
+6  --->     4+2   --->    rw-
+
+Write command for the following permission on demo.txt
+for user    ->    Read and Write
+for group   ->    Write and Execute
+for other   ->    only Write
+
+$ chmod 632 demo.txt
+    rw--wx-w-
+
+$ chmod 135 demo.txt
+    --x-wxr-x
+    
+ 77 means 077
+ $ chmod 77 demo.txt
+    ---rwxrwx
+   
+ 7 means 007
+ $ chmod 7 demo.txt
+    ------rwx
+    
+ You must have to provide the permissions
+ $ chmod demo.txt   -->     we get error
+ 
+ unmask command:
+ --
+ 
+ unmask  means user mask i.e hiding permissions.
+ Based on unmask default permission will be there for our files and directories.
+ 
+ $ unmask 0022    ->    The default unmask value id 022
+ ( the first bit is stick bits that is used by administor)
+ The first 0 is sticky bit mostly used in admin related activity
+ We have to consider only last 3 digits.
+ 
+ Default premission to the file   -->   666 - unmask value
+ i.e  666-022   i.e   644   ( means u -> rw   g ->  r   o ->  r )
+ 
+  
+ Default premission to the directory   -->   777 - unmask value
+ i.e  777-022   i.e   755   ( means u -> rwx   g ->  rx   o ->  rx )
+ 
+ Q. for newly created files default permission should be 444, then what shuold be unmask value
+ Ans.   222   (everyone have read permission)
+ 
+ Based on our requiremnt we can change unmask value
+ $ unmask 077
+ 
+ $ touch file1.txt
+ 
+ $ ls -l file1.txt
+    rw-------       -> only read and write permission to the user and remaing nothig
+    
+Note:
+--
+The mostly used unmask values are 022, 002, 077, 007
+
+022 ->    User has both read and write permission but group and other having only read permission
+002 ->    User, group have both read and write permission but other having only read permission
+077 ->    User has both read and write permission but group and other have no permission
+007 ->    User, group has both read and write permission but other have no permission
+
+To create new user in the existing group
+
+sudo adduser --ingroup durga durga1   -> (here durga is group name and durga1 is the user name)
+Now enter your your super user password the durga1 password
+
+Use case
+--
+durga and durga1 are user belong to the durga group
+
+Note:
+--
+$ sudo adduser durga2  ( if you don't provide --ingourp then it will create user and group with same name)
+
+$ sudo adduser durga2   -> so it will create a user durga2 in the durga2 group
+
+su - durga1   ->    to switch to durga1 user
