@@ -70,4 +70,19 @@ durfa:x:1000:1000:durga,,:/home/durga:/bin/bash
 How to check all avialble shell in our system
 --
 
+/etc/shells   file contains all available shells information
+
+$ cat /etc/shells
+/etc/shells   :   valid login shells
+/bin/sh
+/bin/bash
+/bin/rbush
+/bin/dash
+
+How to switch to other shells:
+--
+Based on our required we can switch from 1 shell to another shell
+switch sh shell      ->     $ sh         exit from sh shell and back to default shell       ->      $ exit
+switch rbash shell   ->     $ rbash      exit from rbash shell and back to default shell    ->      $ exit
+switch dash shell    ->     $ dash       exit from dash shell and back to default shell     ->      $ exit
 
