@@ -111,3 +111,83 @@ o   ->    To open a line below the cursor postion i.e after currunt line
 
 copy and paste data:
 --
+
+yy     ->  To copy a line (yanking)
+3yy    ->  To copy 3 lines
+yw     ->  To copy a word
+3yw    ->  To copy 3 words
+y$     ->  To copy from currunt cursor postion to end of line
+y^     ->  To copy from begining of the line to currunt cursor postion
+P      ->  Paste above the cursor postion
+p      ->  Paste below the cursor postion
+
+
+cursor navigation commands:
+--
+k    ->   Top arrow
+j    ->   Bottom arrow
+l    ->   Right arrow
+h    ->   Left arrow
+3k   ->   3 times Top arrow
+3j   ->   3 times Bottom arrow
+3l   ->   3 times Right arrow
+3h   ->   3 times Left arrow
+$    ->   End of the currunt line (end key)
+^    ->   Begining of the currunt line (home key)
+H    ->   Begining of the currunt page
+M    ->   Middle of the currunt page
+L    ->   End of the currunt page
+b    ->   back to begning of the word
+3b   ->   back to begning of the 3rd word i.e 3rd postion word
+e    ->   end of the currunt word
+w    ->   forward to begning of the next word
+3w   ->   forward to beging of the 3rd next word
+G    ->   move to last line
+
+At exit mode:
+--
+:1  ->   To goto first line
+:7  ->   To go to seventh line
+
+ctrl+f  ->  one page forward (page down)
+ctrl+b  ->  one page backword (page up)
+
+note:
+--
+If we want to perform undo previous operation than we should use
+u  ->  means undo previous operation
+
+
+Exit mode command:
+--
+
+:w               ->    save file data
+:q               ->    quit editor
+:wq              ->    save and quit from the editor
+:q!              ->    force quit. if we perform any changes then these changes will be ignored. close without saving
+:setnu           ->    to set line number in the editor
+:setnonu         ->    to remove line number in the editor
+:n               ->    to place the cursor to nth line
+:$               ->    to place the cursor to last line
+
+:! date <any linux_command>   ->   To execute any unix command
+ eg.
+ :! cal, :! date
+ 
+ Note:
+ --
+ $ vi +3 test.sh  ->  open test.sh and enter into 3rd line
+ 
+ #### nano editor:
+
+It is the linux based editor. It is sometimes like window notepad
+
+$ nano abc.txt
+
+abc.txt will be open by using nano editor.. here all keyboard key will work
+
+ctrl+g   ->   to get help    ( here command are not case sensitve)
+ctrl+o   ->   to save file
+ctrl+x   ->    to exit from the nano editor
+ 
+ 
