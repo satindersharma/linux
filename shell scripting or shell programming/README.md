@@ -242,3 +242,110 @@ All variable are divided into 2 types:
 --
 There are predefined variables and mostly used internally by the system. Hence there variable also know as system variables.
 
+But basaed on our requirment, we can use this variable in our scripts
+we can get all environment variable information by using either env command or set command
+
+$ env
+$ set
+
+How to change prompt:
+--
+
+internally PS1 environment variable is responsible to display terminal promt, by reassign this variable value we can change the  prompt
+
+durga@durga-VirtualBox:~$ PS1=sunny$
+sunny$        ->        durga@durga-VirtualBox:~ is definedin PS1 variable
+
+demo scripts to use some environment variables
+
+env.sh
+--
+
+#! /bin/bash
+
+echo "user name:$USER"
+echo "user home directory: $HOME"
+echo "user currunt working directory$PWD"
+echo "default shell:$SHELL"
+echo "path location:$PATH"
+
+user defined variables:
+--
+
+Based on our programming requirment we can define our own variables also such types of variables are called user defied variables.
+
+$ USER=Dhoni
+$ echo "Hello $USER"      ->      Hello Dhoni
+
+Rules to define variables:
+--
+
+1. It is highly recommanded to use only uppercase charcters.
+2. If variable contains multiple words then this word should be seperated with underscore.
+3. variable names can't start with digit
+4. we can't use special symbol line    -,@,# etc
+
+How to define read only variables:
+---
+
+we can defaine readonly varaibles by using readonly keyword
+$ x=5
+$ readonly=x
+$ x=100         ->      x readonly variable
+
+If variable is readonly then we cannot perform reassignment for that variables and it will become constant
+
+variables scripts:
+---
+
+There are 3 scopes available for variables.
+
+1. session scope
+2. user scope
+3. system scope
+
+1.session scope:
+--
+The variable which are declared in the terminal are said to be in session scope. Once we close the terminal (i.e currunt session) automatically all varibles will be gone.
+$ x=10
+$ y=18
+This are session scope variable
+
+2.user scope:
+--
+The variable which are declared inside .barshrc file are said to be in user scope.
+
+These variable are available for all session related to currunt user.
+These variable can't be accessed by other user.
+
+.bashrc
+--
+
+export GEUST=Dhone
+export FRIEND=kholi
+
+#### note:
+The changes will refelected only when we restart the terminal as we have edited the .bashrc file and these file run when terminal start.
+in case of user scope, If you switch to another user it won't work
+
+3.system scope:
+--
+If the variable available for all user and for a sessions, such type of variable are said to be in system scope.
+
+We have to declare these variables inside /etc/prfiles file
+but to edit this file compulsary root permission must required.
+( the porfile file is a system file so a normal user can't modify only root user can do that)
+
+$ sudo gedit /etc/ profile
+export HERO=MSDhoni
+export HEROINE=sunny
+
+#### note:
+The change will reflected when the system restart as /etc contains system configurationn file and we have edited these files. so restart is required
+(to reflect the changes we have to restart our virtaulmachine)
+
+Variable Substitution:
+--
+
+
+
