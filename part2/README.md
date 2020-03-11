@@ -939,5 +939,5 @@ $ tr -d 'aeiou' < demo.txt   =>    it will remove every lower case vowel
 -s means sqeeze repeats
 it will change aa aaa  aaaaa aaaaaaaaa ....     to    a
 
-$ tr -s 'a' < demo.txt   =>    it will replase a sequence of 'a' with a
+$ tr -s 'a' < demo.txt   =>    it will replace a sequence of 'a' with a
 
