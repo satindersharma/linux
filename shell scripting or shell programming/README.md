@@ -223,4 +223,22 @@ $ gedit .bashrc
 and the following line at the bottom of files(.bashrc)
 export PATH=$PATH:/home/durga/scripts
 
+Q. What is the meaning of startup files?
+--
+.bashrc is the startup file and will be execute automaticaly at the terminal starting,, hence if we want to perform any activity while starting the terminal then we have to define that activity inside this file.
+
+eg.         creating aliases, updating PATH variable values etc
+
+Variables:
+--
+Variables are placeholder to hold our values. variables are key value pair. In shell programming there are no data types, every value is treated as text type or string type.
+
+All variable are divided into 2 types:
+
+1. Environment variables/predefined variables
+2. user defined variables
+
+1.Environment variables:
+--
+There are predefined variables and mostly used internally by the system. Hence there variable also know as system variables.
 
