@@ -346,6 +346,51 @@ The change will reflected when the system restart as /etc contains system config
 
 Variable Substitution:
 --
+Accessing the value of a variable by using and symbol is called variable sustitution
+
+syntax
+$variablename
+$(variablename)
+
+Recommended way is $(variablename)
+
+test.sh
+---
+#! /bin/bash
+
+a=10
+b=15
+course=linux
+ACTION=SLEEP
+echo "the value of a and b is $a $b"
+echo "my favourite action is $ACTIONING"
+echo "I Love ${ACTION}ING
+
+output
+--
+the value of a and b is 10 15
+my favourite action is 
+I Love SLEEPING
 
 
+consider the following variable declartion:
+---
+NAME="UNIIX"         &#10004;
+NAME='UNIIX'         &#10004;
+NAME=UNIIX           &#10004;
 
+To print variable NAME:
+---
+echo NAME           &#10008;
+echo $NAME          &#10004;
+echo '$NAME'        &#10008;
+echo "$NAME"        &#10004;
+
+While performing variable substitution , we can't use single quotes but we can use double quotes.
+
+command substitution:
+--
+We can execute command substitution and we can substitute its results based on our requirment, this concept is called substitution
+syntax:
+--
+old syntax
