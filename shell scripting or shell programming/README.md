@@ -393,4 +393,35 @@ command substitution:
 We can execute command substitution and we can substitute its results based on our requirment, this concept is called substitution
 syntax:
 --
-old syntax
+old style:   `command`   (These are backquotes but not sigle qoutes)
+new style:    $(command)  
+
+eg:
+"today date `date +%D`"   ->    old style
+"today date $(date +%D)   -?    new style
+eg:
+echo "Files in currunt workind directory is : `ls | wc -l`"
+echo "Files in currunt workind directory is : $(ls | wc -l)"
+
+Command Line Arguments:
+--
+The arguments which are passing from the command promt at the time of exection are called command line argumetns.
+
+$ users.sh 10 20 30     ->    10 20 30 are command line arguments
+
+inside the scriptw ecan access command line arguments as follow
+
+$#    -->   Number of arguments
+$0    -->   script/file name
+$1    -->   First argument
+$2    -->   Second argument
+$3    -->   Third argument
+$@    -->   All Arguments(It behave like seperated argument)
+$*    -->   All Arguments(It behave like one single argument)
+$?    -->   Represets exist code of Previously executed command or script
+
+Differece between $@ and $*
+--
+$@ all command line arguments with space seperator:       "$1" "$2" "$3" "$4" "$5"
+$* all command line arguments as single string where C is the first character of the internal field seperator
+IFS   "$1c$2c$3c$4c$5"
