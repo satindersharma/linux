@@ -425,3 +425,9 @@ Differece between $@ and $*
 $@ all command line arguments with space seperator:       "$1" "$2" "$3" "$4" "$5"
 $* all command line arguments as single string where C is the first character of the internal field seperator
 IFS   "$1c$2c$3c$4c$5"
+
+
+The default first character seperator is space.
+
+How to change default IFS:
+--
