@@ -431,3 +431,24 @@ The default first character seperator is space.
 
 How to change default IFS:
 --
+
+set / grep 'IFS'
+IFS=$' \t\n' The first in the list.
+default is sepace tab  new llne
+
+How to change IFS:
+
+test.sh
+--
+#! /bin/bash
+
+IFS="-"
+
+echo "All arguments with @ :  $@ "      -->   All arguments with @ :  10 20 30
+echo "All args with * :  $* "           -->   All args with * :  10-20-30
+
+note:
+--
+echo add \n (i.e new line)by default
+to remove new line with option -n
+
