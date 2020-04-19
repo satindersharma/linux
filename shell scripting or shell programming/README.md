@@ -452,3 +452,123 @@ note:
 echo add \n (i.e new line)by default
 to remove new line with option -n
 
+What is the purpose of command line argument?
+--
+The main purpose of command line argument is to cutomize behaviour of the script.
+
+test.sh
+--
+#! /bin/bash
+len=$(echo-n 'unix' | wc -c)
+echo 'The no of character $len'
+
+The above script can work only for string "unix"
+
+
+test.sh
+--
+#! /bin/bash
+len=$(echo-n $1 | wc -c)
+echo 'The no of character $len'
+
+The above script can work for any string provided from the command promt
+
+Q. Write script to create log file with timestamp.
+--
+
+test.sh
+--
+#! /bin/bash
+
+timestamp=$(date +%d_%m_%Y_%H_%M_%S)
+echo "This is date to log file" >> $(timestamp).log
+date >> $(timestamp).log
+echo >> $(timestamp).log
+
+if we want for every minute then
+timestamp=$(date +%d_%m_%Y_%H_%M)
+
+if we want for every month then
+timestamp=$(date +%d_%m)
+
+How to read dynamic data from the end user:
+--
+By using read keyword we can read dynamic data from the end user.
+
+Without prompt message:
+--
+$ read a b    ->    10 20
+$ echo $a     ->    10
+$ echo $b     ->    20
+
+Without prompt message:
+--
+
+Approach 1:
+-
+test.sh
+--
+#! /bin/bash
+$ echo -n "Enter A"
+$ read A
+$ echo -n "Enter B"
+$ read B
+echo "A value : $A"
+echo "B value : $B"
+
+Approach 2:
+-
+test.sh
+--
+#! /bin/bash
+$ read -p "Enter A" A     ->    -p means for prompt
+$ read -p "Enter B" B
+echo "A value : $A"
+echo "B value : $B"
+
+Need of -s option:
+---
+If we use -s option it hides inputon the screen which is provided by end user. for sensitive information like password,cridit card, pin no etc, we have to use this option.
+
+test.sh
+--
+#! /bin/bash
+$ read -p "Enter the name" name     ->    -p means for prompt
+$ read -s "Enter password" password    ->   by using -s option nothing is visble on terminal
+
+
+Operator concept:
+---
+
+1.Arthmetic Operator:
+--
++, -, *, /, %
+
+2.Relational Operator:  -->    (numric comperissio operator)
+--
+
+-gt   -->   Greater Then
+-ge   -->   Greater Then or Equal to
+-lt   -->   Less Then
+-le   -->   Greater Then or Equal to
+-eq   -->   Is Equal to
+-ne   -->   Not Equal to
+
+The return typw of the operators is boolen (true or false)
+
+3.Logical Operators:
+---
+-a    -->   logical AND
+-o    -->   logical OR
+!     -->   logical NOT
+
+4.Assigment Operator:
+--
+=
+
+Note
+--
+Except assignment operator,for all operators we have to provide space before and after operator.
+
+How to perform methematical operations:
+--
