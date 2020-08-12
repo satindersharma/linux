@@ -11,13 +11,15 @@ There are multiple editors available.
 #### gedit:
 It is a graphical editor. It is simply same as window notepad.
 
-$ gedit first.sh
+$ ```bash
+gedit first.sh
+```
 
-echo "hel o"
+`echo "hel o"`
 
-mkdir dir{1..6}
+`mkdir dir{1..6}`
 
-echo "6 dir created"
+`echo "6 dir created"`
 
 ctrl+s    ->    to save
 
