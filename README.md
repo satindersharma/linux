@@ -1,3 +1,10 @@
+<p align="center">
+<a href="https://github.com/satindersharma/linux">
+<img src="https://github.com/satindersharma/all-images/blob/master/icons/linux-logo.png" width="30%" height="30%" alt="Linux icon">
+</a>
+</p>
+
+
 Overview of UNIX/LINUX Operating System
 ---------------------------------------
 
