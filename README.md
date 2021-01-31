@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://github.com/satindersharma/linux">
-<img src="https://github.com/satindersharma/all-images/blob/master/icons/linux-logo.png" width="80%" height="80%" alt="Linux icon">
+<img src="https://github.com/satindersharma/all-images/blob/master/icons/linux-logo.svg" width="80%" height="80%" alt="Linux icon">
 </a>
 </p>
 
