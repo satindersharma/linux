@@ -147,11 +147,17 @@ Directory can contain files and sub directories.
 
 Device files:
 ----
+      
 In Linux every device is represented as a file. By using we can communicate with that device.
+      
 /dev/pts/0    ---> file representing first terminal
+      
 /dev/pts/1    ---> file representing second terminal
+      
 $ echo "Hello"              --->  Hello will be printed to terminal
+      
 $ echo "Hello" > abc.txt    --->  Hello will be written to abc.txt file
+      
 $ echo "Hello" > /dev/pts/1 --->  Hello will be displayed on the second terminal
 
 
