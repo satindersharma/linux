@@ -467,10 +467,15 @@ various options:
 </pre>
 1.Create an empty file where file names cotains current system date.
 --
+
 $ touch durga$(date +%d%m%Y).log
+
 2.Create an empty file where file names cotains current system date.
+
 --
+
 $ touch durga$(date +%d%m%Y%H%M%S).log
+
 Note: If the file name contains date and time, then that file is said to be timestamp file.
 
 calender command:
