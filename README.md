@@ -106,7 +106,7 @@ Shortcut to close Terminal   Ctrl+D
 
 Online UNIX Terminal:
 ------
-www.masswork.at/jsuix
+www.masswerk.at/jsuix
 It is free terminal and written completly in javascript.
 We can access in any browser.
 We can use this terminal only for test basic command.
