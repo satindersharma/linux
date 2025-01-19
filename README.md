@@ -980,6 +980,7 @@ while excting command if anything goes wrong we will get error message.
 commands can take input either form standard input device or from command line arguments. commands will procude results either to the standard output or standard error.
 Standard input, Standard output and Standard error are data streams and can flow from, palace to another place hence redirection and piping concepts are aplicable.
 
+
 command line argument are static
 ----
 and  these(comand line arguments) are not streams. hence redirection and piping are not applicable.
@@ -1031,6 +1032,7 @@ eg. To redirect standard output of cat command from terminla to output.txt
 $ cat 1> output.txt           ->          here 1 associated to standard output
 hello there
 ctrl+d
+
 The output won't display to the terminal and will be written to output.txt
 
 Note:
@@ -1070,6 +1072,7 @@ In unix evertyhing is treated as file even terminal also. we can find terminal r
 termianl 2:
 $ tty       ->          /dev/pts/1
 terminal 1:
+
 $ echo "hello l love You" > /dev/pts/1
 $ clear > /dev/pts/1
 
